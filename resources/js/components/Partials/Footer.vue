@@ -3,21 +3,51 @@
     <div class="container custom_container">
       <div class="footer-extra-content">
         <div class="row footer-main-border">
-          <div class="col-md-6 col-lg-2 col-xl-2 mb-4">
+          <!-- <div class="col-md-6 col-lg-2 col-xl-2 mb-4">
               <router-link :to="{ name: 'frontend-home' }"  ><img :src="generalsetting.site_logo ? generalsetting.site_logo : baseUrl +'/images/logo.svg'"  class="img-fluid logo" alt="logo"></router-link>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-            <h5 class="text-white product-services">{{__('messages.why_choose_handyman')}}</h5>
+          </div> -->
+          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+            <h5 class="text-white product-services">About ODeals Company</h5>
             <div class="extra-content">
              <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.about_us')}} </span> </router-link>
-              <router-link :to="{ name: 'contact-us' }" class="extra-page-content"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.contact_us')}} </span> </router-link>
+             <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span>FAQ</span> </router-link>
+             <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Cancellation & Refund Policy</span> </router-link>
+             <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
+             <!-- <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.cancellation_&_refund_policy')}} </span> </router-link> -->
+              <!-- <router-link :to="{ name: 'contact-us' }" class="extra-page-content"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.contact_us')}} </span> </router-link> -->
               <router-link class="extra-page-content" :to="{ name: 'privacy-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.privacy_policy')}} </span> </router-link>
-              <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
-              <router-link class="extra-page-content" :to="{ name: 'help-support' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.help_support')}} </span> </router-link>
-              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.refund_cancellation_policy')}} </span> </router-link>
+              <!-- <router-link class="extra-page-content" :to="{ name: 'help-support' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.help_support')}} </span> </router-link> -->
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 col-xl-4 mb-md-0 mb-2">
+          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+            <h5 class="text-white product-services">Customer Care</h5>
+            <div class="extra-content">
+             <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>customer@odealsonline.com</span> </a> 
+             <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+            <h5 class="text-white product-services">For Service Provider</h5>
+            <div class="extra-content">
+              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
+              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Business FAQ</span> </router-link> 
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+            <h5 class="text-white product-services">Connect with us</h5>
+            <div class="extra-content">
+              <div class="d-flex align-items-center mb-3">
+                <a class="text-white"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
+                <a class="text-white"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>
+              </div>
+              <h6 class="text-white">ODeals on Your Mobile</h6>
+              <div class="d-flex flex-column mt-4">
+                <a  :href="appsetting.play_store_url" target="_blank"><img :src="baseUrl + '/images/frontend/gpay-white.png'"></a>
+                <a  :href="appsetting.app_store_url" target="_blank"><img class="mt-3" :src="baseUrl + '/images/frontend/apple-white.png'"></a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 col-lg-3 col-xl-4 mb-md-0 mb-2">
             <h5 class="text-white product-services">{{__('messages.handyman_services')}}</h5>
             <div class="row">
              <div class="col-lg-6" v-for="(column,i) in columns" :key="i">
@@ -28,8 +58,8 @@
                 </div>
             </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+          </div> -->
+          <!-- <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
             <div class="card download-card">
               <div class="card-body">
                 <h6 class="text-white mb-3">{{__('messages.download_aplication_from')}}</h6>
@@ -39,11 +69,12 @@
                   <a  :href="appsetting.app_store_url" target="_blank"><img class="mt-3" :src="baseUrl + '/images/frontend/apple-white.png'"></a>
                 </div>
               </div>
+              
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-12">
           <div class="footer-information">
             <div class="footer-social">
@@ -91,10 +122,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
        <div class="row" v-if="generalsetting.site_copyright">
-        <div class="col-lg-12 text-center footer-descriptiom pt-3">
-          <p class="mb-0">{{generalsetting.site_copyright}}</p>
+        <div class="col-lg-12 footer-descriptiom pt-3">
+          <p><small class="mb-2">{{generalsetting.site_copyright}}</small></p>
+          <p style="text-align:justify;">
+            <small>ODeals help to find local service providers like cleaners, part time maids, electricians, air conditioning experts, plumbers and other home pro SPA. 
+              We are here to help you to search and book best spa in Pattaya, the most popular massage in Pattaya, cheap and clean nail salons in Pattaya, top quality
+               hair salons in Pattaya, safe and quality eyelash extension, eyebrow tattoos in Pattaya, or the most reputable hair removal or waxing shops in Pattaya.
+                ODeals also provide home massage booking in Pattaya, discount spa in Pattaya, promotion on facial treatment in Pattaya for you. If you are looking
+                 for best deals, discounts, or promotion of beauty treatment, skin treatment, waxing, or spa and massage or home cleaning or AC Repair Service or Carpentry
+                  or Plumber service in Pattaya. ODeals will help you find and book the best, most popular, best rated, or luxury, premium, quality massage and spa, 
+                  Beauty and Salon, Cleaning Service, AC Repairs, Plumber Services in Pattaya, Thailand. </small>
+          </p>
         </div>
       </div>
     </div>
