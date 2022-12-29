@@ -24,6 +24,10 @@
             <div class="extra-content">
              <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>customer@odealsonline.com</span> </a> 
              <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
+             <div class="d-flex align-items-center mt-3 apps">
+              <a class="text-white"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
+              <a class="text-white"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>
+            </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
@@ -33,7 +37,7 @@
               <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Business FAQ</span> </router-link> 
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+          <!-- <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
             <h5 class="text-white product-services">Connect with us</h5>
             <div class="extra-content">
               <div class="d-flex align-items-center mb-3">
@@ -46,7 +50,7 @@
                 <a  :href="appsetting.app_store_url" target="_blank"><img class="mt-3" :src="baseUrl + '/images/frontend/apple-white.png'"></a>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- <div class="col-md-6 col-lg-3 col-xl-4 mb-md-0 mb-2">
             <h5 class="text-white product-services">{{__('messages.handyman_services')}}</h5>
             <div class="row">
@@ -58,12 +62,14 @@
                 </div>
             </div>
             </div>
-          </div> -->
-          <!-- <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+          </div>  -->
+          <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
             <div class="card download-card">
               <div class="card-body">
                 <h6 class="text-white mb-3">{{__('messages.download_aplication_from')}}</h6>
-                <span class="download-text">{{__('messages.download_text')}}</span>
+                <span class="download-text">Let's enjoy ODeals various services and get latest offer and deals by 
+                  downloading application
+                </span>
                 <div class="d-flex flex-column mt-4">
                   <a  :href="appsetting.play_store_url" target="_blank"><img :src="baseUrl + '/images/frontend/gpay-white.png'"></a>
                   <a  :href="appsetting.app_store_url" target="_blank"><img class="mt-3" :src="baseUrl + '/images/frontend/apple-white.png'"></a>
@@ -71,7 +77,7 @@
               </div>
               
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
       <!-- <div class="row">
@@ -141,6 +147,11 @@
     <cookie-law theme="dark-lime"></cookie-law>
 </footer>
 </template>
+<style scoped>
+.apps a{
+  cursor:pointer;
+}
+</style>
 <script>
 import { mapGetters } from "vuex";
 import CookieLaw from 'vue-cookie-law'

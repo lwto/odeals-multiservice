@@ -5,8 +5,10 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2  align-items-center">
                 <div class="col">
                     <div class="serv-left-sec">
-                        <h3 class="mb-3">{{appsetting.title}}</h3>
-                        <p  class="mb-5">{{appsetting.description}}</p>                
+                        <h3 class="mb-3">Refer and get free services</h3>
+                        <p  class="mb-5">you will only recieve emails related to the Black November promotions.
+                            We won't spam you
+                        </p>                
                         <div class="d-flex dwn-box">                       
                             <button class="dwn-link"><a :href="appsetting.play_store_url"  target="_blank"><img :src="baseUrl+'/images/frontend/googleplay.png'"></a></button>                       
                             <button class="dwn-link"><a :href="appsetting.app_store_url" target="_blank"><img :src="baseUrl+'/images/frontend/apple.png'"></a></button>

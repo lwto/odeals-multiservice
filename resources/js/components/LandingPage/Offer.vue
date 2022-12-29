@@ -2,7 +2,7 @@
 <section  class="our-offer editors mar-top"  data-iq-gsap="onStart">
     <div class="container">
         <div class="header-title text-center">
-             <h3 v-if="discountservice.length > 0">{{__('messages.best_offer')}}</h3>
+             <h3 v-if="discountservice.length > 0">Grap Deals and Special Offers</h3>
         </div>
         <div  class="swiper-container offerSlider">
             <div class="swiper-wrapper">

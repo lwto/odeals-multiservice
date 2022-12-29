@@ -1,5 +1,5 @@
 <template>
-<section class="main-banner">
+<section class="main-banner" >
     <div v-if="slider" class="swiper-container mainBanner">
         <div class="swiper-wrapper">
             <div v-for="(sliderdata,index) in slider" :key="index" class="swiper-slide item-slide"   v-bind:style="{ backgroundImage: 'url(' + sliderdata.slider_image  + ')' }">
@@ -14,6 +14,14 @@
     </div>
 </section>
 </template>
+
+<style scoped>
+    .swiper-slide.item-slide{
+        background-position:center 30%;        
+    }
+
+</style>
+
 <script>
 import { mapGetters } from "vuex";
 import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
