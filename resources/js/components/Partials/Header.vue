@@ -26,7 +26,7 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <router-link :to="{ name: 'service' }"   :class="(currentRouteName === 'service' || currentRouteName === 'service-detail' || currentRouteName === 'category-service'  || currentRouteName === 'provider-service' ? activeRouteClass + ' nav-link' : 'nav-link' )"
+                            <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )"
                             >POST FREE SERVICE</router-link
                             >
                         </li>

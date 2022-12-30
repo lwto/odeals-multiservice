@@ -46,7 +46,7 @@
                     >
                 </div>
                 <div class="col-12 text-center mt-2">
-                    <a @click="redirectToLogin" class="btn btn-primary btn-sm float-right">{{__('messages.login_btn_user')}}</a>
+                    <a @click="redirectToLogin" class="btn btn-primary btn-sm float-right">ADMIN | PROVIDER | ODEALS LOGIN</a>
                 </div>
             </form>
         </b-modal>

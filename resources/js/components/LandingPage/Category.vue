@@ -1,5 +1,6 @@
 <template>
-  <section class="our-category  padding-top padding-bot" data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
+  
+  <section class="our-category  mar-top mar-bot" data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
     <div class="container">
         <div  class="category-box">
           <div class="header-title d-flex justify-content-between align-items-center">
@@ -10,12 +11,11 @@
           </div>
           <!-- <ul v-if="category.length > 0" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 list-inline mb-0"> -->
           <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-6 list-inline mb-0">
-
             <li class="col mar-bot-res">
               <router-link 
                 :to="{
                   name: 'category-detail',
-                  params: { category_id: category[0].id },
+                  params: { category_id: 7 },
                 }"
               >
                 <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -32,7 +32,7 @@
               <router-link 
                 :to="{
                   name: 'category-detail',
-                  params: { category_id: category[3].id },
+                  params: { category_id: 9 },
                 }"
               >
                 <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -49,7 +49,7 @@
               <router-link 
                 :to="{
                   name: 'category-detail',
-                  params: { category_id: category[6].id },
+                  params: { category_id: 15 },
                 }"
               >
                 <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -66,7 +66,7 @@
               <router-link 
                 :to="{
                   name: 'category-detail',
-                  params: { category_id: category[4].id },
+                  params: { category_id: 17 },
                 }"
               >
                 <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -86,7 +86,7 @@
         </div>
     </div>
 
-    <div class="container padding-top">
+    <div class="container" style="margin-top:40px;">
       <div  class="category-box">
         <div class="header-title d-flex justify-content-between align-items-center">
           <h3 class="title">Health and Wellbeing</h3>
@@ -99,7 +99,7 @@
             <router-link 
               :to="{
                 name: 'category-detail',
-                params: { category_id: category[1].id },
+                params: { category_id: 14 },
               }"
             >
               <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -116,7 +116,7 @@
             <router-link 
               :to="{
                 name: 'category-detail',
-                params: { category_id: category[5].id },
+                params: { category_id: 16 },
               }"
             >
               <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -133,7 +133,7 @@
             <router-link 
               :to="{
                 name: 'category-detail',
-                params: { category_id: category[7].id },
+                params: { category_id: 12 },
               }"
             >
               <div :class="`card text-center bg-transparent circle-clip-effect mb-0`" >
@@ -168,6 +168,11 @@
   </div>
   </section>
 </template>
+<style scoped>
+.card{
+  border-radius:0;
+}
+</style>
 <script>
 import { mapGetters } from "vuex";
 export default {

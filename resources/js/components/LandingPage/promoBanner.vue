@@ -1,7 +1,7 @@
 <template>
   <section class="promo-banner" >
-    <!-- custom banner
-    <div class="container">
+    <!-- custom banner-->
+    <div class="">
       <div class="banner d-flex sketchy justify-content-between align-items-center">
         <div class="banner-img">
           <img src="https://www.pngmart.com/files/15/Happy-Face-Transparent-PNG.png" />
@@ -19,12 +19,12 @@
 
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- IMAGE banner -->
-    <div class="container">
+    <div class="">
       <div class="img-banner my-3">
-        <img src="/images/frontend/adsPromo/promobanner.png" />
+        <img src="/images/frontend/adsPromo/promobanner.jpg" />
       </div>
     </div>
   </section>
@@ -117,6 +117,84 @@
     object-fit:cover;
     width:100%;
     height:100%;
+    object-position: center center;
+  }
+
+  @media screen and (max-width: 800px) {
+    .promo-banner .banner .banner-img{
+      padding:10px;
+      margin-left:10px;
+    }
+    .promo-banner .banner .banner-img img{
+      width:100px;
+    }
+    .promo-banner .banner .description{
+      padding:10px;
+    }
+    .promo-banner .banner .description .des-title{
+
+      font-size: 1rem;
+    }
+    .promo-banner .banner .promo-code{
+      padding:10px;
+      margin:10px;
+      width:180px;
+    }
+    h3{
+      font-size:20px;
+    }
+    h5{
+      font-size:18px;
+    }
+    p{
+      font-size:15px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+  
+    .promo-banner .banner .banner-img img{
+      width:80px;
+    }
+  
+    .promo-banner .banner .description .des-title{
+
+      font-size:15px;
+    }
+    .promo-banner .banner .promo-code{
+      width:150px;
+    }
+    h3{
+      font-size:18px;
+    }
+    h5{
+      font-size:16px;
+    }
+    p{
+      font-size:13px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+  
+    .promo-banner .banner .banner-img img{
+      width:30px;
+    }
+  
+    .promo-banner .banner .description .des-title{
+
+      font-size:12px;
+    }
+    .promo-banner .banner .promo-code{
+      width:100px;
+    }
+    h3{
+      font-size:13px;
+    }
+    h5{
+      font-size:12px;
+    }
+    p{
+      font-size:10px;
+    }
   }
   </style>
     

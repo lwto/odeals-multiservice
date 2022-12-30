@@ -5,7 +5,7 @@
             <h3 class="title">Book Your Preferred Services</h3>
             <router-link :to="{ name: 'service' }" class="link-btn-box"><span>{{__('messages.see_all')}}</span></router-link>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 list-inline">
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 list-inline">
             <div v-for="(data, index) in service" :key="index"  class="col">
                 <service-list 
                     :serviceId="data.id"

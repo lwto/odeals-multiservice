@@ -1,5 +1,5 @@
 <template>
-<section class="price padding-top padding-bot">
+<section class="price mar-top">
   <div class="container">
     <div class="header-title d-flex align-items-center justify-content-between flex-wrap gap-3">
       <h3 class="title">We provide professional services at a friendly price</h3>
@@ -7,7 +7,7 @@
     <div>
     <div class="row">
       <div class="col-lg-4">
-        <div class="card shadow">
+        <div class="card ">
           <div class="card-header">
             <i class="fas fa-calendar-alt"></i>
             <h5 class="pl-3">Managed & Planned</h5>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card shadow">
+        <div class="card ">
           <div class="card-header">
             <i class="fas fa-star"></i>
             <h5 class="pl-3">Trained & Experienced</h5>
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card shadow">
+        <div class="card ">
           <div class="card-header">
             <i class="fas fa-building"></i>
             <h5 class="pl-3">Home & Office</h5>
@@ -62,6 +62,9 @@
 }
 .card-header i{
   font-size:24px;
+}
+.card{
+  border:1px solid;
 }
 
 </style>

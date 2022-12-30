@@ -21,6 +21,10 @@ import ProviderService from './views/provider/ProviderService.vue'
 import HelpSupport from './views/HelpSupport/HelpSupport'
 import RefundPolicy from './views/RefundPolicy/RefundPolicy'
 
+import PostServicePage from "./views/PostService/PostService";
+import RegisterPage from "./views/RegisterPage/RegisterPage";
+import LoginPage from "./views/LoginPage/LoginPage";
+
 const routes = [
     { path: '/', name: 'frontend-home', component: LandingPage, meta: { label: 'Home' } },
     { path: '/category', name: 'category', component: Category, meta: { label: 'Category List', homeName:'Category' } },
@@ -41,6 +45,10 @@ const routes = [
     { path: '/help-support', name: 'help-support', component: HelpSupport, meta: { label: 'Help & Support',homeName:'Help & Support' } },
     { path: '/refund-cancellation-policy', name: 'refund-cancellation-policy', component: RefundPolicy, meta: { label: 'Refund Policy',homeName:'Refund Policy' } },
     
+    { path: '/post-free-service', name: 'post-service', component: PostServicePage, meta: { label: 'Post Free Service',homeName:'Post Free Service' } },
+    { path: '/register-page', name: 'register', component: RegisterPage, meta: { label: 'Register Page',homeName:'Register Page' } },
+    { path: '/login-page', name: 'login', component: LoginPage, meta: { label: 'Login Page',homeName:'Login Page' } },
+
 
 
 ];

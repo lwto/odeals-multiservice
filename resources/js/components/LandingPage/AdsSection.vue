@@ -62,8 +62,7 @@
 
   .apps{
     padding: 10%;
-    background:#eee; 
-    border-radius:10px;  
+    background:#eee;   
   }
 
 </style>
