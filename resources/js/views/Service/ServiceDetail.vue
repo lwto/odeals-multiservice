@@ -1,16 +1,19 @@
 <template>
 <div class="service-detail service-main mar-bot">
-    <div class="service-image">
-        <img v-if="serviceData.attchment_extension == true" :src="serviceData.attchments.length >0 ? serviceData.attchments[0]  : baseUrl+'/images/default.png'"  alt="image" class="img-fluid">
-        <div v-else class="player-container">
-            <vue-core-video-player  :src="serviceData.attchments.length >0 ?  serviceData.attchments[0] :baseUrl+'/images/file.png'" :cover="baseUrl+'/images/file.png'" :preload="'auto'"></vue-core-video-player>
+    <div class="container">
+        <div class="service-image">
+            <img v-if="serviceData.attchment_extension == true" :src="serviceData.attchments.length >0 ? serviceData.attchments[0]  : baseUrl+'/images/default.png'"  alt="image" class="img-fluid">
+            <div v-else class="player-container">
+                <vue-core-video-player  :src="serviceData.attchments.length >0 ?  serviceData.attchments[0] :baseUrl+'/images/file.png'" :cover="baseUrl+'/images/file.png'" :preload="'auto'"></vue-core-video-player>
+            </div>
+            <span class="service-fav-item badge badge-1 rounded-pill bg-white">{{__('messages.mark_as_favourite')}}
+                 <favorite :servicedata="serviceData.id" :favorited="serviceData.is_favourite" @emit-list="serviceDetail"/>
+            </span>
         </div>
-        <span class="service-fav-item badge badge-1 rounded-pill bg-white">{{__('messages.mark_as_favourite')}}
-             <favorite :servicedata="serviceData.id" :favorited="serviceData.is_favourite" @emit-list="serviceDetail"/>
-        </span>
     </div>
+
     <div class="service-heading-part">
-        <div class="container">
+        <div class="container px-5">
             <div class="service-heading-box">
                 <div class="service-title">
                     <h3 class="service-title-main">{{serviceData.name}}</h3>

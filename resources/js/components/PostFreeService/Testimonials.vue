@@ -4,7 +4,7 @@
       <h3 class="text-center mb-2">Testimonials</h3>
       <div class="row" style="row-gap:10px;">
           <div class="col-lg-3 col-md-6">
-            <div class="py-3 px-5 border">
+            <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/79.jpg"/>
               </div>
@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="py-3 px-5 border">
+            <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/71.jpg"/>
               </div>
@@ -29,7 +29,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="py-3 px-5 border">
+            <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/men/47.jpg"/>
               </div>
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="py-3 px-5 border">
+            <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/17.jpg"/>
               </div>

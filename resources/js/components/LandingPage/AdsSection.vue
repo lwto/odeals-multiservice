@@ -2,7 +2,7 @@
   <section class="ads-section editors mar-top">
     <div class="container">
       <div class="row" style="row-gap:30px;">
-        <div class="col-lg-9">
+        <div class="col-lg-10">
           <div class="row" style="row-gap:30px;">
             <div class="col-lg-6">
               <h3 class="mb-3">Everyday life made easier</h3>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-2">
           <div class="d-flex flex-column apps justify-content-center">
             <a  href="" target="_blank"><img src="/images/frontend/gpay-white.png"></a>
             <a  href="" target="_blank"><img class="mt-3" src="/images/frontend/apple-white.png"></a>

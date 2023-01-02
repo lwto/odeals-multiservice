@@ -5,7 +5,7 @@
                 <h3>Our Partners and Service Partners</h3>
                 <router-link :to="{ name: 'provider' }" class="link-btn-box">{{__('messages.see_all')}}</router-link>
             </div>
-            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 list-inline">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 list-inline">
                 <div v-for="(data, index) in provider" :key="index" class="col">
                     <div class="provider-box" v-if="index < 4">
                         <div class="img-box">

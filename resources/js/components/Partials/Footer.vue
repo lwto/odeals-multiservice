@@ -22,8 +22,8 @@
           <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
             <h5 class="text-white product-services">Customer Care</h5>
             <div class="extra-content">
-             <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>customer@odealsonline.com</span> </a> 
-             <a href="mailto:customer@odealsonline.com" class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
+             <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>customer@odealspro.com</span> </a> 
+             <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
              <div class="d-flex align-items-center mt-3 apps">
               <a class="text-white"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
               <a class="text-white"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>

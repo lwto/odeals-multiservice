@@ -8,11 +8,13 @@
            used products, connecting users that are just a click away.
         </p>
         <div class="text-center">
-          <router-link :to="{ name: 'register' }">
+          <a @click="redirectToRegister" class="btn btn-primary btn-register mt-3">Register for FREE</a>
+
+          <!-- <router-link :to="{ name: 'register' }">
             <button class="btn btn-primary btn-register mt-3">
               Get Started for FREE
             </button>
-          </router-link>
+          </router-link> -->
         </div>
       </div>
 
@@ -58,3 +60,20 @@ h4{
   font-size:1.95rem;
 }
 </style>
+<script>
+export default {
+ 
+  data() {
+      return {
+          baseUrl: window.baseUrl,
+
+      };
+  }, 
+  methods: {
+      redirectToRegister(){
+          window.location.href = baseUrl + "/register";
+      },
+      
+  },
+};
+</script>

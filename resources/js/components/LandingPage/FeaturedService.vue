@@ -5,7 +5,7 @@
                 <h3 class="title">{{__('messages.featured')}} {{__('messages.service')}}</h3>
                 <router-link :to="{ name: 'service' }"> <span class="link-btn-box">{{__('messages.see_all')}}</span></router-link>
             </div>
-            <div class="row row-cols-1 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 list-inline">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 list-inline">
                 <div v-for="(data, index) in featuredservice" :key="index"  class="col">
                     <service-list v-if="index < 4"
                         :serviceId="data.id"

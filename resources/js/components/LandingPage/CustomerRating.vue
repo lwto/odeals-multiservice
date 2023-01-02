@@ -5,7 +5,7 @@
         <div class="swiper-container customer-testimonial">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" v-for="(rating,index) in topratedservice" :key="index">
-                    <div class="row align-items-center row-cols-lg-2 row-cols-md-1 row-cols-1">
+                    <div class="row align-items-center row-cols-lg-3 row-cols-md-2 row-cols-1">
                         <div class="col">
                             <h3 class="tesimonial-title title-white">{{__('messages.our_customers_says')}}</h3>
                             <h5 class="title-white">“{{rating.service_name}}“</h5>

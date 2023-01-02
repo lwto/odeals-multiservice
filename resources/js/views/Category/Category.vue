@@ -31,6 +31,14 @@
     </section>
 </div>
 </template>
+<style scoped>
+.card {
+    border-radius:0;
+}
+.our-category-lists .category-content {
+    border-radius:0;
+}
+</style>
 <script>
     import {get} from '../../request'
 export default {
