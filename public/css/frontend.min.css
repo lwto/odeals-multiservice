@@ -6009,7 +6009,7 @@ fieldset:disabled .btn {
     background-color: #fff;
     background-clip: border-box;
     border: 0 solid rgba(0, 0, 0, 0.125);
-    /* border-radius: 1.5rem; */
+    border-radius: 1.5rem;
 }
 
 .card>hr {
@@ -15040,7 +15040,7 @@ th {
 }
 
 .nav .top-menu .nav-item:first-child {
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .nav .top-menu .user-dropdown {
@@ -20208,7 +20208,7 @@ img {
 .card-body.service-card img {
     width: 75px;
     height: 75px;
-    /* border-radius: 1.5rem; */
+    border-radius: 1.5rem;
 }
 
 .card-body.service-card:hover {
@@ -20267,10 +20267,10 @@ img {
 }
 
 .our-service .iq-image img {
-    /* border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
     -webkit-border-radius: 15px 15px 0 0;
     -moz-border-radius: 15px 15px 0 0;
-    -o-border-radius: 15px 15px 0 0; */
+    -o-border-radius: 15px 15px 0 0;
     height: 200px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -21421,7 +21421,7 @@ header .searchbox-datalink.global-search-result ul {
 
 .service-card-box .card-body {
     background: #f6f7f9;
-    /* border-radius: 0 0 15px 15px; */
+    border-radius: 0 0 15px 15px;
 }
 
 .italic-text {
@@ -21635,7 +21635,7 @@ table.table-service-detail tr td:first-child {
 
 .service-provider-info .provider-card {
     padding: 30px 30px;
-    /* border-radius: 15px; */
+    border-radius: 15px;
     background: #f6f7f9;
     margin-bottom: 30px;
 }

@@ -52,6 +52,9 @@
 </template>
 
 <style scoped>
+p{
+  color:black;
+}
 .price i{
   color:#5F60B9;
   margin-right:15px;
@@ -65,6 +68,7 @@
 }
 .card{
   border:1px solid;
+  border-radius:0;
 }
 
 </style>

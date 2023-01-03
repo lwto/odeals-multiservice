@@ -30,6 +30,10 @@
     </div>
 </section>
 </template>
+<style scoped>
+
+
+</style>
 <script>
 import { mapGetters } from "vuex";
 export default {

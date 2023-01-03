@@ -24,6 +24,7 @@ import RefundPolicy from './views/RefundPolicy/RefundPolicy'
 import PostServicePage from "./views/PostService/PostService";
 import RegisterPage from "./views/RegisterPage/RegisterPage";
 import LoginPage from "./views/LoginPage/LoginPage";
+import ProfessionalRegisterPage from "./views/ProfessionalRegisterPage/ProfessionalRegisterPage";
 
 const routes = [
     { path: '/', name: 'frontend-home', component: LandingPage, meta: { label: 'Home' } },
@@ -48,6 +49,7 @@ const routes = [
     { path: '/post-free-service', name: 'post-service', component: PostServicePage, meta: { label: 'Post Free Service',homeName:'Post Free Service' } },
     { path: '/register-page', name: 'register', component: RegisterPage, meta: { label: 'Register Page',homeName:'Register Page' } },
     { path: '/login-page', name: 'login', component: LoginPage, meta: { label: 'Login Page',homeName:'Login Page' } },
+    { path: '/professional-register', name: 'prof-register', component: ProfessionalRegisterPage, meta: { label: 'Professional Register Page',homeName:'Professional Register Page' } },
 
 
 

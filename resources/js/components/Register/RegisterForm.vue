@@ -2,6 +2,7 @@
   <section class="register-form padding-top padding-bot">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-6">
+            <h3 class="text-center mb-5">Sign Up With OdealsPro</h3>
             <form
                 action="javascript:void(0)"
                 @submit="register"

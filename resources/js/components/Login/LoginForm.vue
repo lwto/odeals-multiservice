@@ -2,6 +2,7 @@
   <section class="login-form padding-top">
     <div class="row row d-flex justify-content-center">
       <div class="col-lg-4 col-md-6">
+        <h3 class="text-center mb-4">Login To OdealsPro</h3>
           <form action="javascript:void(0)" class="row" method="post">
               <div class="form-group col-12">
                   <label for="email" class="font-weight-bold">{{__('auth.email')}}</label>

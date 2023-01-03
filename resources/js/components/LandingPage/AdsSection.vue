@@ -59,10 +59,15 @@
 </template>
 
 <style scoped>
-
+ p{
+  color:black;
+ }
   .apps{
     padding: 10%;
     background:#eee;   
+  }
+  .check i {
+    color:#5F60B9;
   }
 
 </style>
