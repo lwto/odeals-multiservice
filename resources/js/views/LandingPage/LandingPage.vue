@@ -4,6 +4,7 @@
         <banner/>
         <ads-section/>
         <category/>
+        <promo-img-banner/>
         <service/>
         <offer/>
         <price/>
@@ -26,10 +27,12 @@ import Service from '../../components/LandingPage/Service.vue'
 import PromoBanner from '../../components/LandingPage/promoBanner.vue'
 import AdsSection from '../../components/LandingPage/AdsSection.vue'
 import Price from '../../components/LandingPage/Price.vue'
+import PromoImgBanner from '../../components/LandingPage/promoImgBanner.vue'
+
 
 export default {
     name:'LandingPage',
-    components: { PromoBanner, Banner, AdsSection, Category,Service, Offer, Price, CustomerRating, App, FeaturedService, Provider },
+    components: { PromoBanner, Banner, AdsSection, Category,PromoImgBanner, Service, Offer, Price, CustomerRating, App, FeaturedService, Provider },
     mounted(){
         this.$store.dispatch('dashboardData');
     },

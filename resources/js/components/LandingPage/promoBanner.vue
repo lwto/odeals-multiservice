@@ -20,15 +20,6 @@
         <div class="close-btn" @click="handleClick"><i class="fas fa-window-close"></i></div>
       </div>
 
-
-    <!-- IMAGE banner -->
-    <!-- <div class="image-banner" :class="{ hidden: closeImg==true}">
-      <div class="img-banner my-3">
-        <img src="/images/frontend/adsPromo/promobanner.jpg" />
-        <div class="close-btn" @click="closeBanner"><i class="fas fa-window-close"></i></div>
-      </div>
-      
-    </div> -->
   </section>
 </template>
   
@@ -91,7 +82,10 @@
     background-position: 0% 50%;
   }
 }
-
+.promo-banner {
+  padding: 0 100px;
+  border-radius: 0.125rem;
+}
 .banner.hidden {
   display: none !important;
 }
@@ -100,7 +94,14 @@
   margin-bottom: 8px;
   position: relative;
 }
+.promo-banner .banner .banner-img {
+  padding: 20px;
+  margin-left: 20px;
+}
 
+.promo-banner .banner .banner-img img {
+  width: 130px;
+}
 .close-btn {
   position: absolute;
   right: 4px;
@@ -111,14 +112,7 @@
   cursor: pointer;
 }
 
-.promo-banner .banner .banner-img {
-  padding: 20px;
-  margin-left: 20px;
-}
 
-.promo-banner .banner .banner-img img {
-  width: 130px;
-}
 
 .promo-banner .banner .description {
   padding: 20px;
@@ -138,24 +132,12 @@
   width: 300px;
 }
 
-.img-banner {
-  max-height: 200px;
-  overflow: hidden;
 
+@media (max-width: 1199px) {
+  .promo-banner {
+    padding: 0 30px;
+  }
 }
-.image-banner{
-  position:relative;
-}
-.image-banner.hidden{
-  display:none;
-}
-.img-banner img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: center center;
-}
-
 @media screen and (max-width: 800px) {
   .promo-banner .banner .banner-img {
     padding: 10px;
@@ -256,15 +238,11 @@ export default {
   data() {
     return {
       isClose: false,
-      closeImg: false,
     };
   },
   methods: {
     handleClick() {
       this.isClose = true;
-    },
-    closeBanner() {
-      this.closeImg = true;
     },
   },
 };

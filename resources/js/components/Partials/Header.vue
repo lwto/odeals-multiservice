@@ -409,6 +409,9 @@
     outline:none;
     margin-left:15px;
 }
+.nav .top-menu .nav-item:first-child {
+    padding-left: 15px;
+  }
 @media screen and (max-width: 1199px){
     .quick-booking-lg,.btn-prof, .btn-login-signup{
         display:none !important;

@@ -4,8 +4,8 @@
       <div class="col-lg-6 col-sm-8">
           <h3 class="text-center ">Join us as Our Service Provider</h3>
           <div class="d-flex justify-content-center align-items-center"> 
-              <a class="btn btn-light freelance">Freelancer</a>
-              <a class="btn btn-primary company">Company</a>
+              <a @click="redirectToFreelance" class="btn btn-light freelance">Freelancer</a>
+              <a @click="redirectToCompany" class="btn btn-primary company">Company</a>
             
           </div>
          
@@ -22,5 +22,27 @@
   margin-left:15px;
 }
 </style>
+
+<script>
+
+export default {
+ 
+  data() {
+      return {
+          baseUrl: window.baseUrl,
+
+      };
+  }, 
+  methods: {
+      redirectToFreelance(){
+          window.location.href = baseUrl + "/register-freelance";
+      },
+      redirectToCompany(){
+          window.location.href = baseUrl + "/register-company";
+      },
+      
+  },
+};
+</script>
 
 
