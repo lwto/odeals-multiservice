@@ -1,10 +1,10 @@
 <template>
-<section class="price mar-top">
+<section class="price">
   <div class="container">
-    <div class="header-title d-flex align-items-center justify-content-between flex-wrap gap-3">
-      <h3 class="title">We provide professional services at a friendly price</h3>
-    </div>
-    <div>
+    
+    <h3 class="text-center mb-5">We Provide Professional Services at a Friendly Price</h3>
+    
+
     <div class="row">
       <div class="col-lg-4">
         <div class="card ">
@@ -52,6 +52,10 @@
 </template>
 
 <style scoped>
+.price{
+  background:#f6f7f9;
+  padding-top:100px;
+}
 p{
   color:black;
 }
@@ -62,13 +66,16 @@ p{
 .card-header{
   display:flex;
   align-items:center;
+  background:transparent;
 }
 .card-header i{
   font-size:24px;
+  
 }
 .card{
   border:1px solid;
   border-radius:0;
+  background:transparent;
 }
 
 </style>

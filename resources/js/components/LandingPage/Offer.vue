@@ -1,7 +1,7 @@
 <template>
-<section  class="our-offer editors mar-top"  data-iq-gsap="onStart">
+<section  class="our-offer editors"  data-iq-gsap="onStart">
     <div class="container">
-        <div class="header-title text-center">
+        <div class="text-center mb-5">
              <h3 v-if="discountservice.length > 0">Grab Deals and Special Offers</h3>
         </div>
         <div  class="swiper-container offerSlider">
@@ -31,6 +31,11 @@
     </div>
 </section>
 </template>
+<style scoped>
+.our-offer{
+    padding:100px 0;
+}
+</style>
 <script>
 import { mapGetters } from "vuex"
 import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'

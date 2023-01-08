@@ -1,17 +1,24 @@
 <template>
     <div>
-        <promo-banner/>
-        <banner/>
+        <!-- <promo-banner/> -->
+        <banner-two/>
+        <category-two/>
+        <featured-services-two/>
         <ads-section/>
+        <offer/>
+        <price/>
+        <provider/>
+        <app/>
+        <!-- 
         <category/>
         <promo-img-banner/>
         <service/>
-        <offer/>
+        
         <price/>
         <customer-rating/>
         <app/>
         <featured-service/>
-        <provider/>
+        <provider/> -->
     </div>
 </template>
 <script>
@@ -28,11 +35,29 @@ import PromoBanner from '../../components/LandingPage/promoBanner.vue'
 import AdsSection from '../../components/LandingPage/AdsSection.vue'
 import Price from '../../components/LandingPage/Price.vue'
 import PromoImgBanner from '../../components/LandingPage/promoImgBanner.vue'
+import BannerTwo from '../../components/LandingPage/BannerDesignTwo.vue'
+import CategoryTwo from '../../components/LandingPage/CategoryTwo.vue'
+import FeaturedServicesTwo from '../../components/LandingPage/FeaturedServicesTwo.vue'
 
 
 export default {
     name:'LandingPage',
-    components: { PromoBanner, Banner, AdsSection, Category,PromoImgBanner, Service, Offer, Price, CustomerRating, App, FeaturedService, Provider },
+    components: { 
+        CategoryTwo,
+        FeaturedServicesTwo,
+        PromoBanner, 
+        BannerTwo,
+        Banner, 
+        AdsSection, 
+        Category,
+        PromoImgBanner, 
+        Service, 
+        Offer, 
+        Price, 
+        CustomerRating, 
+        App, 
+        FeaturedService, 
+        Provider },
     mounted(){
         this.$store.dispatch('dashboardData');
     },

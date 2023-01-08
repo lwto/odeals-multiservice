@@ -1,5 +1,5 @@
 <template>
-  <section class="ads-section editors mar-top">
+  <section class="ads-section">
     <div class="container">
       <div class="row" style="row-gap:30px;">
         <div class="col-lg-10">
@@ -69,7 +69,10 @@
   .check i {
     color:#5F60B9;
   }
-
+.ads-section{
+  background:#f6f7f9;
+  padding:100px 0;
+}
 </style>
 
 <script>

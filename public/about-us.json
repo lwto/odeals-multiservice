@@ -1,44 +1,44 @@
 {
-    "sectionOne":{
-        "title":"A whole world of services at your door step",
-        "sub_title" :"The best for every budget",
-        "text":"The best for every budget Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    "sectionOne": {
+        "title": "A whole world of services at your door step",
+        "sub_title": "Let us make your home or office perfect today!",
+        "text": "ODeals is the leading mobile application to find local service providers like cleaners, part time maids, electricians, air conditioning experts, plumbers and other home pros SPA. Use our ODeals Web and Mobile App to book reliable service provider and use cashless options to pay.",
         "image_one": "about-1.png",
         "image_two": "about-2.png",
-        "card" :{
-            "counter": "1548",
-            "text":"Gave Services Across The Cities And World"
+        "card": {
+            "counter": "20+",
+            "text": "Gave Services Across The Cities And World"
         }
     },
-    "sectionTwo":{
-        "title" : "Experience in Number",
-        "text" : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
-        "card":{
-            "count1" :"250+",
-            "value1" :"Authorized Team",
-            "count2" :"90+",
-            "value2" :"Service Cities",
-            "count3" :"1400+",
-            "value3" :"Happy Customers"
+    "sectionTwo": {
+        "title": "Experience in Number",
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.",
+        "card": {
+            "count1": "250+",
+            "value1": "Authorized Team",
+            "count2": "90+",
+            "value2": "Service Cities",
+            "count3": "1400+",
+            "value3": "Happy Customers"
         },
-        "goal_to_achieve":{
-            "title":"Goal to Achieve",
-            "text":"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-            "checklist":[
+        "goal_to_achieve": {
+            "title": "Goal to Achieve",
+            "text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+            "checklist": [
                 "Amet minim mollit non deserunt",
                 "Amet minim mollit non deserunt",
                 "Amet minim mollit non deserunt"
             ],
-            "image" : "about-bg.png"
+            "image": "about-bg.png"
         }
     },
-    "sectionFour":{
-        "title":"Meet Our leaders",
+    "sectionFour": {
+        "title": "Meet Our leaders",
         "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
     },
-    "sectionSix":{
+    "sectionSix": {
         "title": "Subscribe to our newsletter",
-        "text" : "Subscribe to the newsletter to receive exclusive offers, latest news, and updates",
-        "buttontext" : "Subscribe"
+        "text": "Subscribe to the newsletter to receive exclusive offers, latest news, and updates",
+        "buttontext": "Subscribe"
     }
 }

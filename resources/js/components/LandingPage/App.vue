@@ -24,6 +24,11 @@
     </div>
 </section>
 </template>
+<style scoped>
+.our-free-service{
+    margin-top:0;
+}
+</style>
 <script>
 import { mapGetters } from "vuex";
 

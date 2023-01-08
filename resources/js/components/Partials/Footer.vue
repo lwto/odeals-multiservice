@@ -10,7 +10,7 @@
             <h5 class="text-white product-services">About ODeals Company</h5>
             <div class="extra-content">
              <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.about_us')}} </span> </router-link>
-             <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span>FAQ</span> </router-link>
+             <router-link class="extra-page-content" :to="{ name: 'faq' }"> <label><i class="fas fa-angle-right"></i></label> <span>FAQ</span> </router-link>
              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Cancellation & Refund Policy</span> </router-link>
              <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
              <!-- <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.cancellation_&_refund_policy')}} </span> </router-link> -->
@@ -33,8 +33,8 @@
           <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
             <h5 class="text-white product-services">For Service Provider</h5>
             <div class="extra-content">
-              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
-              <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Business FAQ</span> </router-link> 
+              <router-link class="extra-page-content" :to="{ name: 'why-list-your-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
+              <router-link class="extra-page-content" :to="{ name: 'faq' }"> <label><i class="fas fa-angle-right"></i></label> <span>Business FAQ</span> </router-link> 
             </div>
           </div>
           <!-- <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
