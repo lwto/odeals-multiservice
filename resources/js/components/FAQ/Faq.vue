@@ -1,15 +1,16 @@
 <template>
-  <section class="faq-section padding-top padding-bot">
+  <section class="faq-section padding-bot pt-5">
     <div class="container">
       <div class="row justify-content-center">
+        <h3 class="text-center pb-5">Frequently Ask Questions</h3>
         <div class="col-md-8">
           <div id="accordion">
             <div v-for="faq in FAQs" class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" :data-target="'#faq' + faq.id" aria-expanded="true" :aria-controls="'#faq' + faq.id">
+                  <p class="btn btn-link" data-toggle="collapse" :data-target="'#faq' + faq.id" aria-expanded="true" :aria-controls="'#faq' + faq.id">
                      {{ faq.ques }}
-                  </button>
+                  </p>
                 </h5>
               </div>
           
@@ -38,9 +39,14 @@
   background:#efefe3;
   text-align: left;
 }
+.card-header p{
+margin-bottom:0;
+text-transform: capitalize;
+}
 .btn{
   background:#efefe3;
   box-shadow:none;
+  text-align: left;
 
 }
 .card-body{
