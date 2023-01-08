@@ -1,5 +1,5 @@
 <template>
-  <section class="faq-section">
+  <section class="faq-section padding-top padding-bot">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
