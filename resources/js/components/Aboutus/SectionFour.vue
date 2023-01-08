@@ -1,12 +1,12 @@
 <template>
 
-<section v-if="data" class="our-provider editors mar-top mar-bot"  data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
+<section class="our-provider editors mar-top mar-bot section-four"  data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
     <div class="container"> 
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="header-title text-center">
-                    <h3 class="mb-3">{{data.title}}</h3>
-                    <p>{{data.text}}
+                    <h3 class="mb-3">Meet Our leaders</h3>
+                    <p>All our service providers are verified
                     </p>
                 </div>
             </div>
@@ -35,9 +35,6 @@ import {get} from '../../request'
 
 export default {
   name: "SectionFour",
-  props:{
-    data:{type:Object}
-  },
   mounted(){
     this.getProvider()
   },
@@ -55,11 +52,6 @@ export default {
             per_page: 4
           },
         })
-        .then((response) => {
-          if(response.status){
-            this.providers = response.data.data;
-          }
-        });
     },
   },
 }
