@@ -26,7 +26,7 @@
               </div>
                 <p class="provider">by <a>{{data.provider_name}}</a></p>
                 <p class="pt-3 price">{{data.price_format}}</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i></p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p>
               </div>
             </div>  
           </div>
@@ -50,34 +50,39 @@
 p{
   margin-bottom:0px;
 }
+h3{
+  color:#042f16;
+}
 .service-name{
   font-size:18px;
   font-weight:500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color:#719A78;
 }
 .provider a{
-  color:blue;
+  color:#109848;
 }
 .price{
   font-size:18px;
   font-weight:bold;
-  color:blue;
+  color:#109848;
 }
 .btn-prev, .btn-next{
   padding:2px 12px;
-  color:#000;
-  background:#f0eeee;
+  color:#042f16;
+  background:#F2F8F0;
   border-radius:50%;
   cursor:pointer;
 }
 .card{
   border-radius:8px;
   overflow:hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 .card-body{
-  border:1px solid #ddd;
+  border:1px solid #F2F8F0;
   border-top:0px;
   border-radius:8px;
   border-top-right-radius:0px;
@@ -103,6 +108,17 @@ p{
   background:white;
   overflow:hidden;
 }
+.btn-primary{
+  background:#109848;
+  border-color:#109848;
+}
+.btn-primary:hover{
+  background:#0b8f42;
+}
+.location span{
+  color:#719A78;
+}
+
 </style>
 <script>
 import { mapGetters } from "vuex";
@@ -117,9 +133,9 @@ export default {
     },
     mounted(){
     new Swiper(".featured-swiper", {
-        // autoplay:{delay: 6000},
+        autoplay:{delay: 6000},
         loop: true,
-        slidesPerView: 6,
+        slidesPerView: 4,
         spaceBetween: 8,
         observer: true,  
         observeParents: true,
@@ -133,8 +149,8 @@ export default {
         },
         breakpoints: {
             320: { slidesPerView: 1 },
-            620: { slidesPerView: 2 },
-            735: { slidesPerView: 2 },
+            620: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
             991: { slidesPerView: 3},
             1400: { slidesPerView: 4 },
             1500: { slidesPerView: 4 },

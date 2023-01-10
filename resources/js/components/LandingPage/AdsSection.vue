@@ -1,12 +1,10 @@
 <template>
   <section class="ads-section">
-    <div class="container">
-      <div class="row" style="row-gap:30px;">
-        <div class="col-lg-10">
-          <div class="row" style="row-gap:30px;">
-            <div class="col-lg-6">
+    <div class="">
+      <div class="row d-flex align-items-center" style="row-gap:30px;">
+            <div class="col-lg-6 content">
               <h3 class="mb-3">Everyday life made easier</h3>
-              <p>When life gets busy, you don't have to tackie it alone.
+              <p class="text-white">When life gets busy, you don't have to tackie it alone.
                 Get time back for what you love without breaking the bank.
               </p>
               <p class="check">
@@ -22,7 +20,7 @@
                 <span>Chat, pay, tip and review all through one platform</span>
               </p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 px-0">
               <div v-if="slider" class="swiper-container adsBanner">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ">
@@ -46,33 +44,30 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-2">
-          <div class="d-flex flex-column apps justify-content-center">
-            <a  href="" target="_blank"><img src="/images/frontend/gpay-white.png"></a>
-            <a  href="" target="_blank"><img class="mt-3" src="/images/frontend/apple-white.png"></a>
-            <p class="mt-3">Download and Be a part of OdealsPro</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 
 <style scoped>
+p,h3, span{
+  color:#fff;
+}
  p{
   color:black;
  }
-  .apps{
-    padding: 10%;
-    background:#eee;   
-  }
+
   .check i {
-    color:#5F60B9;
+    color:#e3faec;
   }
-.ads-section{
-  background:#f6f7f9;
-  padding:100px 0;
+.content{
+  padding:40px 20px;
 }
+.ads-section{
+  background:#109848;
+}
+.adsBanner{
+  height:100%;
+}
+
 </style>
 
 <script>

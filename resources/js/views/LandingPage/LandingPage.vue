@@ -2,13 +2,15 @@
     <div>
         <!-- <promo-banner/> -->
         <banner-two/>
+        <apps-banner/>
         <category-two/>
         <featured-services-two/>
         <ads-section/>
         <offer/>
-        <price/>
+        <offer-two/>
         <provider/>
         <app/>
+        
         <!-- 
         <category/>
         <promo-img-banner/>
@@ -33,17 +35,20 @@ import Provider from '../../components/LandingPage/Provider.vue'
 import Service from '../../components/LandingPage/Service.vue'
 import PromoBanner from '../../components/LandingPage/promoBanner.vue'
 import AdsSection from '../../components/LandingPage/AdsSection.vue'
-import Price from '../../components/LandingPage/Price.vue'
 import PromoImgBanner from '../../components/LandingPage/promoImgBanner.vue'
 import BannerTwo from '../../components/LandingPage/BannerDesignTwo.vue'
 import CategoryTwo from '../../components/LandingPage/CategoryTwo.vue'
 import FeaturedServicesTwo from '../../components/LandingPage/FeaturedServicesTwo.vue'
+import AppsBanner from '../../components/LandingPage/AppsBanner.vue'
+import OfferTwo from '../../components/LandingPage/OfferDesignTwo.vue'
 
 
 export default {
     name:'LandingPage',
     components: { 
+        OfferTwo,
         CategoryTwo,
+        AppsBanner,
         FeaturedServicesTwo,
         PromoBanner, 
         BannerTwo,
@@ -53,7 +58,6 @@ export default {
         PromoImgBanner, 
         Service, 
         Offer, 
-        Price, 
         CustomerRating, 
         App, 
         FeaturedService, 

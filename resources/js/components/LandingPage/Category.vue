@@ -172,6 +172,7 @@
 .card{
   border-radius:0;
 }
+
 </style>
 <script>
 import { mapGetters } from "vuex";

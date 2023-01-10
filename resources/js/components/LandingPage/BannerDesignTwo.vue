@@ -7,17 +7,17 @@
           <h2>Find The Right</h2>
           <h2 class="font-weight-bolder"><span>Home</span> Services Around You</h2>
           <form>
-            <div class="row d-flex mt-4" style="column-gap:20px;">
-              <div class="col-md-6 col-lg-7">
+            <div class="row d-flex mt-4" style="column-gap:10px; row-gap:15px;">
+              <div class=" col-sm-10 col-md-6 col-lg-7">
                 <input type="text" class="form-control" placeholder="What are you Looking for?">
               </div>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-sm-10 col-md-6 col-lg-4">
                 <input type="text" class="form-control" placeholder="Your Location">
               </div>
             </div>
             <button class="btn btn-primary mt-4">Search</button>
           </form>
-          <div class="services mt-4 d-flex align-items-center">
+          <div class="services mt-4 d-flex align-items-center flex-wrap">
             <p><i class="fas fa-circle"></i>Services</p>
             <p class="service">AC Installation</p>
             <p Class="service">Nail Spa</p>
@@ -39,32 +39,51 @@
   background-image: url('/images/frontend/banner-image.png');
   background-repeat:no-repeat;
   background-size:cover;
-  background-position:bottom left;
+  background-position:center center;
 }
+
 .banner-content{
   padding:80px 0;
 }
 .banner-content h2 span{
-  color:rgb(190, 130, 246);
+  color:#109848;
 }
 .banner-content h2:second-child{
   font-weight:bolder;
 }
 .banner-content .services i{
   margin-right:4px;
-  color:orange;
+  color:#109848;
 }
 .banner-content .services .service{
   padding:0px 10px;
   border:1px dotted white;
-  background-color:rgb(239, 239, 248) ;
-  color:rgb(190, 130, 246);
+  background-color:#e3faec;
+  color:#109848;
   margin-left:15px;
   border-radius:4px;
   font-size:14px;
 }
 input{
   border-radius:4px;
+}
+.btn-primary{
+  background:#109848;
+  border-color:#109848;
+}
+.btn-primary:hover{
+  background:#0b8f42;
+}
+input{
+  outline:none;
+  border:none;
+  background:white;
+}
+@media screen and (max-width: 762px) {
+  .banner-two{
+    background-position:bottom left;
+  }
+  
 }
 </style>
 <script>

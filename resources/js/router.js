@@ -51,7 +51,7 @@ const routes = [
     { path: '/register-page', name: 'register', component: RegisterPage, meta: { label: 'Register Page',homeName:'Register Page' } },
     { path: '/login-page', name: 'login', component: LoginPage, meta: { label: 'Login Page',homeName:'Login Page' } },
     { path: '/professional-register', name: 'prof-register', component: ProfessionalRegisterPage, meta: { label: 'Professional Register Page',homeName:'Professional Register Page' } },
-{ path: '/faq', name: 'faq', component: FAQ, meta: { label: 'Frequently Ask Questions',homeName:'FAQ' } },
+{ path: '/faq', name: 'faq', component: FAQ, meta: { label: 'FAQ',homeName:'Frequently Ask Questions' } },
 
 
 

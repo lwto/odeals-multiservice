@@ -41,7 +41,8 @@ img{
   align-self:center;
 }
 .category{
-  border:1px solid #ddd;
+ 
+  border:1px solid #F2F8F0;
   border-radius:4px;
   padding: 20px;
   width:180px;
@@ -53,13 +54,14 @@ img{
 .categories-name{
   margin-top:15px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
+  color:#042f16;
 
 }
 .btn-prev, .btn-next{
   padding:2px 12px;
-  color:#000;
-  background:#f0eeee;
+  color:#042f16;
+  background:#F2F8F0;
   border-radius:50%;
   cursor:pointer;
 }
@@ -80,7 +82,7 @@ export default {
     new Swiper(".category-swiper", {
         // autoplay:{delay: 6000},
         loop: true,
-        slidesPerView: 6,
+        slidesPerView: 1,
         spaceBetween: 10,
         observer: true,  
         observeParents: true,
@@ -93,9 +95,9 @@ export default {
             clickable: true,
         },
         breakpoints: {
-            320: { slidesPerView: 2 },
+            389: { slidesPerView: 2 },
             550: { slidesPerView: 2 },
-            735: { slidesPerView: 3 },
+            768: { slidesPerView: 3 },
             991: { slidesPerView: 4},
             1400: { slidesPerView: 5 },
             1500: { slidesPerView: 6 },

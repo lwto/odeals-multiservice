@@ -2,7 +2,6 @@
   <section class="faq-section padding-bot pt-5">
     <div class="container">
       <div class="row justify-content-center">
-        <h3 class="text-center pb-5">Frequently Ask Questions</h3>
         <div class="col-md-8">
           <div id="accordion">
             <div v-for="faq in FAQs" class="card">
