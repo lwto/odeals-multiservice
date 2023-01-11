@@ -56,7 +56,7 @@ p,h3, span{
  }
 
   .check i {
-    color:#e3faec;
+    color:#F2F8F0;
   }
 .content{
   padding:40px 20px;

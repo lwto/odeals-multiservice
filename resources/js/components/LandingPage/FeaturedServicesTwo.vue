@@ -1,5 +1,5 @@
 <template>
-<section class="featured-services-two">
+<section class="featured-services-two"  data-iq-gsap="onStart">
   <div class="container">
     <h3 class="text-center mb-5">Featured Services</h3>
     <div v-if="slider" class="swiper-container featured-swiper">
@@ -14,6 +14,7 @@
                 <div class="provider-img">
                   <img :src="data.provider_image ? data.provider_image : baseUrl+'/images/default.png'" />
                 </div>
+                <p class="provider">by <a>{{data.provider_name}}</a></p>
               </div>
               <div class="card-body">
                 <a :href="'#/service-detail/'+data.id">
@@ -24,8 +25,7 @@
                       <rating :readonly = true :showrating ="false" :ratingvalue="data.total_rating" />
                   </div>
               </div>
-                <p class="provider">by <a>{{data.provider_name}}</a></p>
-                <p class="pt-3 price">{{data.price_format}}</p>
+                <p class="price">{{data.price_format}}</p>
                 <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p>
               </div>
             </div>  
@@ -59,11 +59,12 @@ h3{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color:#719A78;
+  color:#042f16;
 }
-.provider a{
-  color:#109848;
+.location i{
+  color:#042f16;
 }
+
 .price{
   font-size:18px;
   font-weight:bold;
@@ -116,7 +117,16 @@ h3{
   background:#0b8f42;
 }
 .location span{
-  color:#719A78;
+  color:#042f16;
+}
+.provider {
+  color:#fff;
+  background:#109848;
+  padding:0 12px;
+  position:absolute;
+  right:10px;
+  bottom:10px; 
+  font-size:13px;
 }
 
 </style>

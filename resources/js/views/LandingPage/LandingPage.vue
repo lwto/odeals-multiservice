@@ -7,9 +7,9 @@
         <featured-services-two/>
         <ads-section/>
         <offer/>
-        <offer-two/>
+        <house-services/>
+        <wellbeing-services/>
         <provider/>
-        <app/>
         
         <!-- 
         <category/>
@@ -26,6 +26,8 @@
 <script>
 import { mapGetters } from "vuex";
 import App from '../../components/LandingPage/App.vue'
+import HouseServices from '../../components/LandingPage/HouseServices.vue'
+import WellbeingServices from '../../components/LandingPage/WellbeingServices.vue'
 import Banner from '../../components/LandingPage/Banner.vue'
 import Category from '../../components/LandingPage/Category.vue'
 import CustomerRating from '../../components/LandingPage/CustomerRating.vue'
@@ -40,13 +42,14 @@ import BannerTwo from '../../components/LandingPage/BannerDesignTwo.vue'
 import CategoryTwo from '../../components/LandingPage/CategoryTwo.vue'
 import FeaturedServicesTwo from '../../components/LandingPage/FeaturedServicesTwo.vue'
 import AppsBanner from '../../components/LandingPage/AppsBanner.vue'
-import OfferTwo from '../../components/LandingPage/OfferDesignTwo.vue'
+
 
 
 export default {
     name:'LandingPage',
     components: { 
-        OfferTwo,
+        WellbeingServices,
+        HouseServices,
         CategoryTwo,
         AppsBanner,
         FeaturedServicesTwo,
