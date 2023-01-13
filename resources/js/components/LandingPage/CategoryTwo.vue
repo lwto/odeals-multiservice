@@ -24,7 +24,7 @@
         </div>
   
       </div>
-      <div class="mt-4 d-flex justify-content-center">
+      <div class="mt-5 d-flex justify-content-center">
         <div class="btn-prev "><i class="fas fa-angle-left"></i></div>
         <div class="btn-next" style="margin-left:10px;"><i class="fas fa-angle-right"></i></div>
       </div>

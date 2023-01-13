@@ -1,7 +1,7 @@
 <template>
     <div>
         <breadcrumb :sectionName="this.$route.meta.label" :homeName="this.$route.meta.homeName" />
-        <div class="container mar-top mar-bot terms-content">        
+        <div class="container pt-5 mar-bot terms-content">        
             <div v-if="refund_policy && refund_policy.value != null "  v-html="refund_policy.value">
             </div>  
             <div v-else>

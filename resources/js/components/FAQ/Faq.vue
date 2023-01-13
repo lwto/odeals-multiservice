@@ -7,16 +7,15 @@
             <div v-for="faq in FAQs" class="card">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <p class="btn btn-link" data-toggle="collapse" :data-target="'#faq' + faq.id" aria-expanded="true" :aria-controls="'#faq' + faq.id">
-                     {{ faq.ques }}
-                  </p>
+                  <div class="btn btn-link d-flex gap-3 align-items-center" data-toggle="collapse" :data-target="'#faq' + faq.id" aria-expanded="true" :aria-controls="'#faq' + faq.id">
+                    <i class="fas fa-angle-down"></i>
+                    <p style="font-weight:bold;">{{ faq.ques }}</p>
+                  </div>
                 </h5>
               </div>
           
               <div :id="'faq' + faq.id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  {{faq.ans}}
-                </div>
+                <div class="card-body" style="white-space:pre-line;">{{faq.ans}}</div>
               </div>
             </div>
             </div>
@@ -35,17 +34,20 @@
   padding:0;
   border-radius:0;
   border-bottom:1px solid #eee;
-  background:#efefe3;
+  background:#F2F8F0;
   text-align: left;
 }
 .card-header p{
 margin-bottom:0;
-text-transform: capitalize;
+padding-top:15px;
+padding-bottom:15px;
+text-transform:initial;
 }
 .btn{
-  background:#efefe3;
+  background:#F2F8F0;
   box-shadow:none;
   text-align: left;
+  color:black;
 
 }
 .card-body{
@@ -61,115 +63,105 @@ export default{
       FAQs : [
         {
           id:1,
-          ques:"1.	How do I Book a service?",
-          ans:""
+          ques:"How do I book a service?",
+          ans:"If you already register with ODeals. You can choose any service that you prefer and book for the services. If you cannot book the services, please contact our service team via LINE (LINE account: odeals.th)"
         },
         {
           id:2,
-          ques:"2.	I already booked services, why I haven’t received a booking confirmation?",
-          ans:""
+          ques:"I already booked services, why I haven't received a booking confirmation?",
+          ans:"i.	Pay with Credit/Debit Card, Promptpay, you will receive a confirmation instantly after you completed a payment. \n \n ii.	Pay with Internet Banking or Mobile Banking, you will receive a confirmation within 1 hour after you completed a payment."
         },
         {
           id:3,
-          ques:"3.	When do I get a confirmation email?",
-          ans:""
+          ques:"When do I get a confirmation email?",
+          ans:"You will receive an instant confirmation email that gives you the details of your booking. If you have not received your booking confirmation email, please check your SPAM folder, if you still cannot find it, please contact us and we will re-send the confirmation to you."
         },
         {
           id:4,
-          ques:"4.	Where can I check my booking detail and status?",
-          ans:""
+          ques:"Where can I check my booking detail and status?",
+          ans:"You can check via your email that you provide during register ODelas account. Or you can check in your ODeals profile under “My Booking”. You will also be able to see all the appointments you have made under this tab."
         },
         {
           id:5,
-          ques:"5.	How can I make a change to or cancel existing appointment?",
-          ans:""
+          ques:"How can I make a change to or cancel existing appointment?",
+          ans:"If you need to change a detail of your appointment (date, start time, duration, address, etc) or to cancel it - please reach out to our customer service team via live chat or our Line and we can update your request or appointment for you. \n \n Please note the following change/ cancellation policy: \n  1. If you cancel up to 24 hours before the time of your appointment, there is no charge. \n  2. If you cancel between 3 and 24 hours before your appointment, there is a 50% fee off your service price. \n  3. If you cancel less than 3 hours in advance, you will be charged the full price of the service. \n \n  This cancellation policy is in place to compensate the Service Provider for reserving their time and giving up other opportunities for work. Because we're on-demand, Service Provider lose income if they keep an appointment time open for you without remuneration."
         },
 
         {
           id:6,
-          ques:"6.	How do I know if my booking was cancelled?",
-          ans:""
+          ques:"How do I know if my booking was cancelled?",
+          ans:"You can check in your ODeals profile under “My Booking”."
         },
         {
           id:7,
-          ques:"7.	Where can I find the cancellation policy?",
-          ans:""
-        },
-        {
-          id:8,
-          ques:"8.	How can I book a service for multiple people?",
-          ans:""
+          ques:"Where can I find the cancellation policy?",
+          ans:"You can check in our ODelas website under 'Cancellation & Refund Policy' page. "
         },
         {
           id:9,
-          ques:"9.	Can I pay by Cash?",
-          ans:""
+          ques:"Can I pay by Cash?",
+          ans:"No. We receive only Online Payment. "
         },
         {
           id:10,
-          ques:"10.	How can I pay ODeals Online?",
-          ans:""
+          ques:"How can I pay ODeals Online?",
+          ans:"Pay with Credit/Debit Card, Promptpay \n Pay with Internet Banking or Mobile Banking"
         },
         {
           id:11,
-          ques:"11.	How long is my Voucher valid for?",
-          ans:""
-        },
-        {
-          id:12,
-          ques:"12.	Can you resend the voucher to me? ",
-          ans:""
+          ques:"How long is my Voucher valid for?",
+          ans:"You can check in your ODeals Profile under 'Voucher'. You will able to see your voucher expired date. "
         },
         {
           id:13,
           ques:"13.	Where do I add my promotional code/discount code?",
-          ans:""
+          ans:"When you do the booking there will have place to add 'promotion code/discount code'. If you can not to find place to add, please contact our customer service via Line. "
         },
         {
           id:14,
-          ques:"14.	When and where do I receive a refund?",
-          ans:""
+          ques:"When and where do I receive a refund?",
+          ans:"Please check in our ODelas website under 'Cancellation & Refund Policy' page. "
         },
         {
           id:15,
-          ques:"15.	Can I give my reservation/booking to someone else?",
-          ans:""
+          ques:"Can I give my reservation/booking to someone else?",
+          ans:"Please contact our customer service via LINE."
         },
 
         {
           id:16,
-          ques:"16.	Will I get charged additionally if I move my booking/reservation to a future date?",
-          ans:""
+          ques:"Will I get charged additionally if I move my booking/reservation to a future date?",
+          ans:"If you move the booking up to 24 hours before the time of your appointment, there is no charge. "
         },
         {
           id:17,
-          ques:"17.	Is it possible to book while I am away from home?",
-          ans:""
+          ques:"Is it possible to book while I am away from home?",
+          ans:"It is depended on what service you choose."
         },
         {
           id:18,
-          ques:"18.	Which area do you service?",
-          ans:""
+          ques:"Which area does your service cover?",
+          ans:"Currently we are available on Bangkok and Pattaya. Later we will expand more city. "
         },
         {
           id:19,
-          ques:"19.	What are the timings during which I can book the services?",
-          ans:""
+          ques:"What are the timings during which I can book the services?",
+          ans:"You can book the service any time."
         },
         {
           id:20,
-          ques:"20.	If I want to complain about issues, charges or guidance, what should I do?",
-          ans:""
+          ques:"If I want to complain about issues, charges or guidance, what should I do?",
+          ans:"You can send email to us or send message to us via LINE."
         },
         {
           id:21,
-          ques:"21.	How will I know about new discount offers??",
-          ans:""
+          ques:"How will I know about new discount offers??",
+          ans:"You can check on your ODelas account under “Notification”. "
         },
         {
           id:22,
-          ques:"22.	Do I need to do anything before you arrive?",
-          ans:""
+          ques:"Do I need to do anything before you arrive?",
+          ans:"You no need to do anything before our service provider arrive."
         },
       ]
     }

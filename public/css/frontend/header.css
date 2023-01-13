@@ -1,0 +1,14 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.header-two.scroll-header {
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
+}

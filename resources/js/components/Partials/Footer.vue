@@ -10,32 +10,32 @@
             <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
               <h5 class="product-services">About ODeals Company</h5>
               <div class="extra-content">
-               <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.about_us')}} </span> </router-link>
-               <router-link class="extra-page-content" :to="{ name: 'faq' }"> <label><i class="fas fa-angle-right"></i></label> <span>FAQ</span> </router-link>
-               <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Cancellation & Refund Policy</span> </router-link>
-               <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
+               <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span> About us </span> </router-link>
+               <router-link class="extra-page-content" :to="{ name: 'why-list-your-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
+               <router-link class="extra-page-content" :to="{ name: 'post-free-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Post free service</span> </router-link>
                <!-- <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.cancellation_&_refund_policy')}} </span> </router-link> -->
                 <!-- <router-link :to="{ name: 'contact-us' }" class="extra-page-content"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.contact_us')}} </span> </router-link> -->
-                <router-link class="extra-page-content" :to="{ name: 'privacy-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.privacy_policy')}} </span> </router-link>
                 <!-- <router-link class="extra-page-content" :to="{ name: 'help-support' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.help_support')}} </span> </router-link> -->
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
+              <h5 class="product-services">Important Links</h5>
+              <div class="extra-content">
+                <router-link class="extra-page-content" :to="{ name: 'faq' }"> <label><i class="fas fa-angle-right"></i></label> <span>FAQs</span> </router-link>
+                <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span>Cancellation & Refund Policy</span> </router-link>
+                <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
+                <router-link class="extra-page-content" :to="{ name: 'privacy-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.privacy_policy')}} </span> </router-link>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
               <h5 class="product-services">Customer Care</h5>
               <div class="extra-content">
-               <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>customer@odealspro.com</span> </a> 
+               <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
                <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                <div class="d-flex align-items-center mt-3 apps">
                 <a class="social"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
                 <a class="social"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>
               </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
-              <h5 class="product-services">For Service Provider</h5>
-              <div class="extra-content">
-                <router-link class="extra-page-content" :to="{ name: 'why-list-your-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
-                <router-link class="extra-page-content" :to="{ name: 'faq' }"> <label><i class="fas fa-angle-right"></i></label> <span>Business FAQ</span> </router-link> 
               </div>
             </div>
             <!-- <div class="col-md-6 col-lg-3 col-xl-3 mb-4">

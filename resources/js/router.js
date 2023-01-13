@@ -41,17 +41,17 @@ const routes = [
     { path: '/about-us', name: 'about-us', component: About, meta: { label: 'About Us',homeName:'About us' } },
     { path: '/contact-us', name: 'contact-us', component: ContactUs, meta: { label: 'Contact Us',homeName:'Contact us' } },
     { path: '/privacy-policy', name: 'privacy-policy', component: PrivacyPolicy, meta: { label: 'Privacy Policy',homeName:'Privacy Policy'} },
-    { path: '/term-conditions', name: 'term-conditions', component: TermsConditions, meta: { label: 'Term Conditions',homeName:'Term Conditions' } },
+    { path: '/term-conditions', name: 'term-conditions', component: TermsConditions, meta: { label: 'Term and Conditions',homeName:'Term and Conditions' } },
     { path: '/provider', name: 'provider', component: Provider, meta: { label: 'Provider List' } },
     { path: '/provider-service/:provider_id', name: 'provider-service', component: ProviderService, meta: { label: 'Provider Service' } },
     { path: '/help-support', name: 'help-support', component: HelpSupport, meta: { label: 'Help & Support',homeName:'Help & Support' } },
-    { path: '/refund-cancellation-policy', name: 'refund-cancellation-policy', component: RefundPolicy, meta: { label: 'Refund Policy',homeName:'Refund Policy' } },
+    { path: '/refund-cancellation-policy', name: 'refund-cancellation-policy', component: RefundPolicy, meta: { label: 'Canellation & Refund Policy',homeName:'Canellation & Refund Policy' } },
     
     { path: '/post-free-service', name: 'post-service', component: PostServicePage, meta: { label: 'Post Free Service',homeName:'Post Free Service' } },
     { path: '/register-page', name: 'register', component: RegisterPage, meta: { label: 'Register Page',homeName:'Register Page' } },
     { path: '/login-page', name: 'login', component: LoginPage, meta: { label: 'Login Page',homeName:'Login Page' } },
     { path: '/professional-register', name: 'prof-register', component: ProfessionalRegisterPage, meta: { label: 'Professional Register Page',homeName:'Professional Register Page' } },
-{ path: '/faq', name: 'faq', component: FAQ, meta: { label: 'FAQ',homeName:'Frequently Ask Questions' } },
+    { path: '/faq', name: 'faq', component: FAQ, meta: { label: 'FAQs',homeName:'Frequently Ask Questions' } },
 
 
 

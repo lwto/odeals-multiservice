@@ -6,10 +6,11 @@
         <main class="main-content">
             <div class="position-relative">
                 <header>
-                   <Header/>
+                   <!-- <Header/> -->
+                   <HeaderTwo/>
                 </header>
             </div>
-            <div class="conatiner-fluid content-inner p-0">
+            <div class="container-fluid content-inner p-0" style="margin-top:80px;">
                 <router-view></router-view>
             </div>
             <Footer/>
@@ -20,9 +21,10 @@
 import Loader from "../components/Partials/Loader";
 import Header from "../components/Partials/Header";
 import Footer from '../components/Partials/Footer';
+import HeaderTwo from "../components/Partials/HeaderTwo.vue";
 export  default {
     name:'MasterLayout',
-    components: {Header, Loader,Footer}
+    components: {Header, Loader,Footer, HeaderTwo}
 }
 </script>
 
