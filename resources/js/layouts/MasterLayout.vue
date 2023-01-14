@@ -10,7 +10,7 @@
                    <HeaderTwo/>
                 </header>
             </div>
-            <div class="container-fluid content-inner p-0" style="margin-top:80px;">
+            <div class="container-fluid content-inner p-0" style="margin-top:126.25px;">
                 <router-view></router-view>
             </div>
             <Footer/>
