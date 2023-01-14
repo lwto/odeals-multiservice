@@ -5,8 +5,6 @@
         <a href="" class="lang">ไทย</a>
         <a href="" class="lang">中文</a>
         <a href="" class="lang">မြန်မာ</a>
-        alkdflksjdlfkjd
-
     </div>
     <div class="header">
       <div class="header-left col-lg-5">
