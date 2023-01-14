@@ -26,7 +26,7 @@
                 <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
                 <router-link class="extra-page-content" :to="{ name: 'privacy-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.privacy_policy')}} </span> </router-link>
               </div>
-            </div>
+            </div>adlkfj
             <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
               <h5 class="product-services">Customer Care</h5>
               <div class="extra-content">
