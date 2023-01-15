@@ -46,11 +46,6 @@
               <h6>Important Links</h6>
               <ul>
                 <li class="link-item">
-                  <router-link :to="{ name: 'faq' }"   :class="(currentRouteName === 'faq' ? activeRouteClass + ' nav-link' : 'nav-link' )">
-                    FAQs
-                  </router-link>
-                </li>
-                <li class="link-item">
                   <router-link :to="{ name: 'refund-cancellation-policy' }"   :class="(currentRouteName === 'refund-cancellation-policy' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                     Cancellation & Refund Policy
                   </router-link>
@@ -71,6 +66,11 @@
               <div class="row">
                 <div class="col-lg-6">
                   <ul>
+                    <li class="link-item">
+                      <router-link :to="{ name: 'faq' }"   :class="(currentRouteName === 'faq' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                        FAQs
+                      </router-link>
+                    </li>    
                     <li class="link-item"  @click="redirectToLogin">Account Sign In/ Sign Up</li>
                     <li class="link-item">
                       <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
@@ -145,7 +145,6 @@
     </b-modal>
     </div>
   </div>
-
 </template>
 <style lang="scss">
 ul{
