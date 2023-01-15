@@ -4,8 +4,8 @@
       <div class="col-lg-6 col-sm-8">
           <h3 class="text-center ">Join us as Our Service Provider</h3>
           <div class="d-flex justify-content-center align-items-center"> 
-              <a @click="redirectToFreelance" class="btn btn-light freelance">Freelancer</a>
-              <a @click="redirectToCompany" class="btn btn-primary company">Company</a>
+              <a @click="redirectToFreelance" class="btn freelance">Sign up as Freelancer</a>
+              <a @click="redirectToCompany" class="btn company">Sign up as Company</a>
             
           </div>
          
@@ -17,9 +17,20 @@
 <style scoped>
 .freelance,.company{
   margin-top:40px;
+  font-size:17px;
+  font-weight:500;
 }
 .company{
   margin-left:15px;
+  color:#fff;
+  background:#109848;
+}
+.freelance{
+  background:#e3faec;
+  color:#000;
+}
+.btn{
+  text-transform: initial;
 }
 </style>
 
