@@ -1,14 +1,28 @@
 <template>
   <section class="house-services">
     <div class="container">
-      <div class="row align-items-center justify-content-center" style="row-gap:15px;">
+      <h3 class="text-center mb-5">Best Deals of The Month</h3>
+      <div class="row align-items-center justify-content-center" style="row-gap:15px;">      
         <div class="col-lg-4 ">
-          <h4 class="text-center mb-5">Best Solution For Every House Problems</h4>
-          <div class="d-flex justify-content-center">
-            <div class="main-image">
-              <img src="https://img.freepik.com/free-photo/satisfied-asian-girl-winks-shows-ok-sign-give-approval-recommends-stands-tshirt-blue-bac_1258-83816.jpg?w=1060&t=st=1673425334~exp=1673425934~hmac=e46ae8a3258b23f74b3cacf024f893e816a42844195de911a8111756a8d2f66f"/>
-              <div class="d-flex justify-content-center button"> <span class="link-btn-box btn">SEE ALL</span></div>
+          <div v-if="slider" class="swiper-container adsBanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="inner-content d-flex justify-content-center">
+                        <img src="/images/frontend/adsPromo/ads-img1.jpg"/>
+                    </div>
+                </div>
+                <div class="swiper-slide item-slide">
+                  <div class="inner-content d-flex justify-content-center">
+                      <img src="/images/frontend/adsPromo/ads-img2.jpg"/>
+                  </div>
+              </div>
+              <div class="swiper-slide item-slide">
+                <div class="inner-content d-flex justify-content-center">
+                    <img src="/images/frontend/adsPromo/ads-img3.jpg"/>
+                </div>
             </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
         <div class="col-lg-8">
@@ -110,7 +124,7 @@
   background:#F2F8F0;
   padding:15px;
 }
-.main-image img{
+.ads-image img{
   width:100%;
   height:auto;
   border-radius:10px;
@@ -119,15 +133,9 @@
   background:white;
   color:#109848;
 }
-.main-image{
-  position:relative;
-}
-.button{
-  position:absolute;
-  bottom:20px;
-  width:100%;
-  margin:auto;
-  
+
+h3{
+  color:#042f16;
 }
 p{
   color:#042f16;
@@ -151,3 +159,48 @@ p{
 }
 
 </style>
+<script>
+import { mapGetters } from "vuex";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
+Swiper.use([Navigation, Pagination, Parallax, Autoplay])
+
+export default {
+    data(){
+      return {
+        baseUrl:window.baseUrl,
+      }
+    },
+    mounted(){
+    new Swiper(".adsBanner", {
+        autoplay:{delay: 6000},
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        observer: true,  
+        observeParents: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            550: { slidesPerView: 1 },
+            991: { slidesPerView: 1},
+            1400: { slidesPerView: 1 },
+            1500: { slidesPerView: 1 },
+            1920: { slidesPerView: 1},
+            },
+        });
+    
+    },
+    
+    computed: {
+        ...mapGetters(['slider']),
+    },
+   
+}
+</script>

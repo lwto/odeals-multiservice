@@ -26,7 +26,7 @@
                 <router-link class="extra-page-content" :to="{ name: 'term-conditions' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.terms_condition')}} </span> </router-link>
                 <router-link class="extra-page-content" :to="{ name: 'privacy-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.privacy_policy')}} </span> </router-link>
               </div>
-            </div>adlkfj
+            </div>
             <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
               <h5 class="product-services">Customer Care</h5>
               <div class="extra-content">
@@ -67,13 +67,13 @@
             <div class="col-md-6 col-lg-3 col-xl-3 mb-4">
               <div class="card download-card">
                 <div class="card-body">
-                  <h6 class="text-white mb-3">{{__('messages.download_aplication_from')}}</h6>
+                  <!-- <h6 class="text-white mb-3">{{__('messages.download_aplication_from')}}</h6> -->
                   <span class="download-text">Let's enjoy ODeals various services and get latest offer and deals by 
                     downloading application
                   </span>
-                  <div class="d-flex flex-column mt-4">
+                  <div class="d-flex align-items-center mt-4 gap-2">
                     <a  :href="appsetting.play_store_url" target="_blank"><img :src="baseUrl + '/images/frontend/gpay-white.png'"></a>
-                    <a  :href="appsetting.app_store_url" target="_blank"><img class="mt-3" :src="baseUrl + '/images/frontend/apple-white.png'"></a>
+                    <a  :href="appsetting.app_store_url" target="_blank"><img :src="baseUrl + '/images/frontend/apple-white.png'"></a>
                   </div>
                 </div>
                 
@@ -175,6 +175,7 @@
 }
 .download-text{
   color:#e3faec;
+  font-size:15px;
 }
 .product-services,.social{
   color:#fdfdfd;

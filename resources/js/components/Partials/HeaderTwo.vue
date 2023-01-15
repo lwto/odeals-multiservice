@@ -46,11 +46,6 @@
               <h6>Important Links</h6>
               <ul>
                 <li class="link-item">
-                  <router-link :to="{ name: 'faq' }"   :class="(currentRouteName === 'faq' ? activeRouteClass + ' nav-link' : 'nav-link' )">
-                    FAQs
-                  </router-link>
-                </li>
-                <li class="link-item">
                   <router-link :to="{ name: 'refund-cancellation-policy' }"   :class="(currentRouteName === 'refund-cancellation-policy' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                     Cancellation & Refund Policy
                   </router-link>
@@ -71,6 +66,11 @@
               <div class="row">
                 <div class="col-lg-6">
                   <ul>
+                    <li class="link-item">
+                      <router-link :to="{ name: 'faq' }"   :class="(currentRouteName === 'faq' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                        FAQs
+                      </router-link>
+                    </li>    
                     <li class="link-item"  @click="redirectToLogin">Account Sign In/ Sign Up</li>
                     <li class="link-item">
                       <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
@@ -110,13 +110,114 @@
           <router-link :to="{ name: 'frontend-home' }"  ><img :src="generalsetting.site_logo ? generalsetting.site_logo : baseUrl +'/images/logo.svg'" class="img-fluid logo" alt="logo" /></router-link>
         </a>
       </div>
+      <!-------- Header Right Side -------->
       <div class="header-right col-lg-5">
         <div class="search">
-          <i class="fas fa-search"></i>
+          <!-- Search Large Device -->
+          <div class="input-group search-text search-device-lg" style="width: auto;">
+            <input type="text" placeholder="Search" class="form-control nav-item dropdown search-input" id="search" @keyup="getServiceList" v-model="keyword"  data-bs-toggle="dropdown" aria-expanded="false"> 
+            <svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+              <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+              <path d="M18.0186 18.4851L21.5426 22" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>            
+          <ul :class="`dropdown-menu dropdown-menu-end user-dropdown ${keyword.length > 0 ? 'show' : ''}`" aria-labelledby="dropdownMenuButton1" class="search-list">
+              <li>
+                <div v-if="serviceList.length > 0 && !show" class="searchbox-datalink global-search-result show-data" :key="componentKey">
+                  <ul class="iq-post p-3">
+                      <div>
+                        <li v-for="service in serviceList" :key="service.id" class="mr-0 pb-0 d-block" @click="removeInput">
+                            <router-link
+                            :to="{
+                                name: 'service-detail',
+                                params: { service_id: service.id },
+                            }"
+                            > 
+                              <p>{{service.name}}</p>
+                            </router-link>
+                        </li>
+                      </div>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div  v-if="show && serviceList.length == 0" class="searchbox-datalink global-search-result show-data" >
+                  <ul class="iq-post">
+                      <div>
+                          {{__('messages.record_not_found')}}
+                      </div>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Search Small Device -->
+          <div class="search-text position-relative search-device-sm cursor-pointer">
+            <i class="fas fa-search s-icon"></i>
+            <div class="search-content">
+                <form>
+                    <div class="input-group  mb-0">
+                        <input type="text" placeholder="Search" id="search" class="form-control" @keyup="getServiceList" v-model="keyword" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
+                            <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <path d="M18.0186 18.4851L21.5426 22" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <ul :class="`search-list dropdown-menu dropdown-menu-end user-dropdown ${keyword.length > 0 ? 'show' : ''}`" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                        <div v-if="serviceList.length > 0 && !show" class="searchbox-datalink global-search-result show-data" :key="componentKey">
+                            <ul class="iq-post p-3">
+                                <div>
+                                <li v-for="service in serviceList" :key="service.id" class="mr-0 mb-3 pb-0 d-block" @click="removeInput">
+                                    <router-link 
+                                    :to="{
+                                        name: 'service-detail',
+                                        params: { service_id: service.id },
+                                    }"
+                                    >
+                                      <p>{{service.name}}</p>
+                                    </router-link>
+                                </li>
+                                </div>
+                            </ul>
+                        </div>
+                        </li>
+                        <li>
+                        <div  v-if="show && serviceList.length == 0" class="searchbox-datalink global-search-result show-data" >
+                            <ul class="iq-post">
+                                <div>
+                                    {{__('messages.record_not_found')}}
+                                </div>
+                            </ul>
+                        </div>
+                        </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="user-menu">
+        </div>
+        
+       <div class="user-btn position-relative">
+        <div class="user-menu" id="user-menu">
           <i class="fas fa-user"></i>
         </div>
+        <div id="user-menu-dropdown">
+          <ul class="list-unstyled mb-0">
+              <li v-if="!isLogged" v-b-modal="'my-modal1'" class="list-link"><a  href="#">{{__('messages.register')}}</a></li>
+              <li  v-if="!isLogged" @click="login" class="list-link"><a  href="#">{{__('messages.login')}}</a></li>
+              <li v-if="isLogged">
+                  <a href="#" class="dropdown-item" @click="getHomePage()"
+                  >{{__('messages.dashboard')}}</a
+                  >
+              </li>
+              <li v-if="isLogged">
+                  <a href="#" class="dropdown-item" @click="logout"
+                  >{{__('messages.logout')}}</a
+                  >
+              </li>
+          </ul>       
+        </div>
+       </div>
         <div v-if="isLogged" class="user-booking">
           <router-link :to="{ name: 'booking' }" class="btn btn-sm">
             {{__('messages.booking')}}
@@ -143,9 +244,10 @@
             </div>
         </form>  
     </b-modal>
+    <login-component ref="openModal" />
+    <Register />
     </div>
   </div>
-
 </template>
 <style lang="scss">
 ul{
@@ -259,13 +361,12 @@ ul{
   .header-right{
     padding:0 20px;
     display:flex;
-    column-gap:25px;
+    column-gap:15px;
     align-items: center;
     justify-content:end;
     .search, .user-menu{
       font-size:1.45rem;
       color:#042f16;
-      cursor:pointer;
       &:hover{
         color:#109848;
       }
@@ -274,16 +375,96 @@ ul{
       color:#fff;
       background:#109848;
     }
+    .search{
+      .search-input{
+        background:transparent;
+        font-size:1rem;
+        outline:none;
+        border:1px solid #F2F8F0;
+        color:#042f16;
+        height:2.3rem;
+      }
+      .search-list{
+        margin-top:40px;
+        a{
+          color:gray;
+          &:hover{
+            color:#042f16;
+          }
+        }
+      }
+    }
+    .user-menu{
+      background:#F2F8F0;
+      padding:0px 13px;
+      cursor:pointer;
+      border-radius:4px;
+    }
+    #user-menu-dropdown{
+        top:45px;
+    }
   } 
+}
+.search-device-sm {
+  display: none;
+}
+@media (max-width: 1200px){
+  .search-device-lg{
+    display:none;
+  }
+  .search-device-sm {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      width: 40px;
+      cursor:pointer;
+     .s-icon{
+      background:#F2F8F0;
+      padding:9px 12px;
+      border-radius:4px;
+     }
+
+      .search-content {
+        left: auto;
+        margin: auto;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        transition: opacity .5s ease-in-out;
+        visibility: hidden;
+        width: 300px;
+        z-index: 999;
+        input {
+          border-radius: 0!important;
+          height: 50px;
+        }
+        .search-list{
+          margin-top:50px !important;
+        }
+      }
+    }
+  .search-device-sm.search-open .search-content {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
 }
 </style>
 <script>
 import { mapGetters } from "vuex";
+import { get } from "../../request";
+import Register from '../../views/Auth/Register.vue';
 export default {
+  components: { Register },
     data() {
         return { 
+          searchdropdownClass: false,
           baseUrl: window.baseUrl,
           activeRouteClass: "active",
+          keyword: "",
           serviceList: [],
           show: false,
           componentKey: 0,
@@ -299,7 +480,28 @@ export default {
         },
     },
     mounted() {
+      //search btn
+      jQuery(".search-device-sm .s-icon").on("click", function (e) {
+            jQuery(".search-device-sm").toggleClass("search-open");
+        });
+      jQuery(document).on("click", function (e) {
+          if (
+              !(
+                  jQuery(e.target).is(".search-device-sm .form-control") ||
+                  jQuery(e.target).is(".search-device-sm .s-icon") ||
+                  jQuery(e.target).is(".search-device-sm")
+              )
+          ) {
+                jQuery(".search-device-sm").removeClass("search-open");
+          }
 
+         if (e.target.parentElement.id == "user-menu") {
+              jQuery("#user-menu-dropdown").toggleClass("user-menu-open");
+          } else {
+              jQuery("#user-menu-dropdown").removeClass("user-menu-open");
+          }
+      });
+      
       //Menu toggle
       jQuery("#toggle-menu").on("click", function () {
         jQuery("#nav-menu").toggleClass("active");
@@ -342,6 +544,18 @@ export default {
           if (!this.$el.contains(e.target)) {
               this.dropdownClass = false;
           }
+        },
+        openDropdown() {
+            this.dropdownClass = !this.dropdownClass;
+        },
+        logout() {
+            this.$store.dispatch("logout");
+        },
+        getHomePage() {
+            window.location.href = baseUrl + "/home";
+        },
+        login() {
+            this.$refs.openModal.show();
         },
         forceRerender() {
             this.componentKey += 1;
@@ -401,6 +615,10 @@ export default {
             localStorage.removeItem("location_current_long");
             localStorage.removeItem("is_location_on");
         }, 
+        removeInput(){
+          this.keyword = "";
+          document.getElementById("search").value = " ";
+        }
   }
   
 }

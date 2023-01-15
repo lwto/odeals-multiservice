@@ -1,7 +1,8 @@
 <template>
   <section class="wellbeing-services">
     <div class="container">
-      <div class="row align-items-center justify-content-center" style="row-gap:15px;">
+      <h3 class="text-center mb-5">Worth The Try</h3>
+      <div class="deals row align-items-center justify-content-center" style="row-gap:15px;">
         <div class="col-lg-8">
           <div class="row justify-content-between" style="row-gap:15px;">
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
@@ -79,12 +80,25 @@
           </div>
         </div>
         <div class="col-lg-4 ">
-          <h4 class="text-center mb-5">Health and Wellbeing</h4>
-          <div class="d-flex justify-content-center">
-            <div class="main-image">
-              <img src="https://img.freepik.com/free-photo/sport-wellbeing-active-lifestyle-concept-portrait-smiling-slim-strong-asian-fitness-girl-personal-workout-trainer-showing-muscles-flexing-biceps-look-proud-white-background_1258-21452.jpg?w=1060&t=st=1673425547~exp=1673426147~hmac=056f312689d534dc39387a4fb6ff4c695dbc945c17d677e658fe09ac9f91cd7e"/>
-              <div class="d-flex justify-content-center button"> <span class="link-btn-box btn">SEE ALL</span></div>
+          <div v-if="slider" class="swiper-container adsBanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="inner-content d-flex justify-content-center">
+                        <img src="/images/frontend/adsPromo/ads-img1.jpg"/>
+                    </div>
+                </div>
+                <div class="swiper-slide item-slide">
+                  <div class="inner-content d-flex justify-content-center">
+                      <img src="/images/frontend/adsPromo/ads-img2.jpg"/>
+                  </div>
+              </div>
+              <div class="swiper-slide item-slide">
+                <div class="inner-content d-flex justify-content-center">
+                    <img src="/images/frontend/adsPromo/ads-img3.jpg"/>
+                </div>
             </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -110,24 +124,21 @@
   background:#F2F8F0;
   padding:15px;
 }
-.main-image img{
+.ads-image img{
   width:100%;
   height:auto;
   border-radius:10px;
 }
-.btn{
-  background:white;
-  color:#109848;
-}
-.main-image{
-  position:relative;
-}
+
 .button{
   position:absolute;
   bottom:20px;
   width:100%;
   margin:auto;
   
+}
+h3{
+ color:#042f16;
 }
 p{
   color:#042f16;
@@ -149,4 +160,54 @@ p{
   right:0;
   top:30px;
 }
+@media screen and (max-width: 778px) {
+  .deals{
+    flex-direction: column-reverse;
+  }
+}
 </style>
+<script>
+import { mapGetters } from "vuex";
+import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper'
+Swiper.use([Navigation, Pagination, Parallax, Autoplay])
+
+export default {
+    data(){
+      return {
+        baseUrl:window.baseUrl,
+      }
+    },
+    mounted(){
+    new Swiper(".adsBanner", {
+        autoplay:{delay: 6000},
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        observer: true,  
+        observeParents: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: { slidesPerView: 1 },
+            550: { slidesPerView: 1 },
+            991: { slidesPerView: 1},
+            1400: { slidesPerView: 1 },
+            1500: { slidesPerView: 1 },
+            1920: { slidesPerView: 1},
+            },
+        });
+    
+    },
+    
+    computed: {
+        ...mapGetters(['slider']),
+    },
+   
+}
+</script>

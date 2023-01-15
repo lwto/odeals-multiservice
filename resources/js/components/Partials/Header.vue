@@ -175,10 +175,6 @@
                     </div> -->
                     
                 <!-- <div class="header-right d-flex align-items-center">
-                    <div class="d-block " v-b-modal.nearlocation>
-                        <Button class="btn btn-outline-dark btn-sm">Quick Booking</Button><br/>
-                         <small>Easily find your preferred service<br/> and instantly book a slot.</small> 
-                     </div> -->
                         
                     <!-- <div class="input-group search-text search-device-lg" style="width: auto;">
                         <input type="text" placeholder="Search" class="form-control nav-item dropdown" @keyup="getServiceList" v-model="keyword"  data-bs-toggle="dropdown" aria-expanded="false"> 
@@ -228,7 +224,7 @@
                          </ul>
                     </div> -->
                     <!-- <div class="d-flex align-items-center" style="margin-left:15px"> -->
-                        <!-- <div class="search-text position-relative search-device-sm cursor-pointer">
+                    <!-- <div class="search-text position-relative search-device-sm cursor-pointer">
                             <i class="fas fa-search s-icon"></i>
                             <div class="search-content">
                                 <form>
@@ -437,7 +433,7 @@ export default {
             keyword: "",
             serviceList: [],
             show: false,
-            componentKey: 0,
+            
             currentAddress: "Search for your area",
             showclass: "",
             showofflocation: false,
