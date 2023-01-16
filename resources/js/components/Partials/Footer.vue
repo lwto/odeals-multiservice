@@ -131,15 +131,11 @@
           </div>
         </div> -->
       </div>
-      <cookie-law theme="dark-lime"></cookie-law>
+      <!-- <cookie-law theme="dark-lime"></cookie-law> -->
     </div>
     <div class="footer-bot">
       <div class="container">
-        <div class="row" v-if="generalsetting.site_copyright">
-          <div class="col-lg-12 footer-descriptiom pt-3">
-            <p><small class="mb-2">{{generalsetting.site_copyright}}</small></p>
-          </div>
-          <p style="text-align:justify;">
+          <p style="text-align:justify;" class="pb-2 pt-4">
             <small>ODeals help to find local service providers like cleaners, part time maids, electricians, air conditioning experts, plumbers and other home pro SPA. 
                 We are here to help you to search and book best spa in Pattaya, the most popular massage in Pattaya, cheap and clean nail salons in Pattaya, top quality
                  hair salons in Pattaya, safe and quality eyelash extension, eyebrow tattoos in Pattaya, or the most reputable hair removal or waxing shops in Pattaya.
@@ -149,13 +145,19 @@
                     Beauty and Salon, Cleaning Service, AC Repairs, Plumber Services in Pattaya, Thailand. 
             </small>
           </p>
-
+          <div class="row copyright" v-if="generalsetting.site_copyright">
+            <div class="col-lg-12 footer-descriptiom pb-2">
+              <p class="text-center"><small>{{generalsetting.site_copyright}}</small></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 </footer>
 </template>
 <style scoped>
+.footer-descriptiom {
+  border:0px;
+}
 .apps a{
   cursor:pointer;
 }
