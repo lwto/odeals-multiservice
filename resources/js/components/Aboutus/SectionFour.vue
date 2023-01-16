@@ -1,6 +1,6 @@
 <template>
 
-<section class="our-provider editors mar-top mar-bot section-four"  data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
+<section class="our-provider editors section-four"  data-iq-gsap="onStart" data-iq-position-y="70" data-iq-rotate="0" data-iq-trigger="scroll" data-iq-ease="power.out" data-iq-opacity="0">
     <div class="container"> 
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -30,6 +30,11 @@
     </div>
 </section>
 </template>
+<style scoped>
+h3{
+  color:#042f16;
+}
+</style>
 <script>
 import {get} from '../../request'
 

@@ -8,6 +8,9 @@
 <style Scoped>
 .slogan{
   padding:100px 0;
-  background-color: antiquewhite;
+  background:#109848;
+}
+h2{
+  color: #F2F8F0;
 }
 </style>

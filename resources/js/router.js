@@ -26,6 +26,7 @@ import RegisterPage from "./views/RegisterPage/RegisterPage";
 import LoginPage from "./views/LoginPage/LoginPage";
 import FAQ from "./views/FAQ/FAQ.vue";
 import ProfessionalRegisterPage from "./views/ProfessionalRegisterPage/ProfessionalRegisterPage";
+import WhyList from "./views/WhyList/WhyList.vue";
 
 const routes = [
     { path: '/', name: 'frontend-home', component: LandingPage, meta: { label: 'Home' } },
@@ -52,6 +53,7 @@ const routes = [
     { path: '/login-page', name: 'login', component: LoginPage, meta: { label: 'Login Page',homeName:'Login Page' } },
     { path: '/professional-register', name: 'prof-register', component: ProfessionalRegisterPage, meta: { label: 'Professional Register Page',homeName:'Professional Register Page' } },
     { path: '/faq', name: 'faq', component: FAQ, meta: { label: 'FAQs',homeName:'Frequently Ask Questions' } },
+    { path: '/why-list-service', name: 'why-list', component: WhyList, meta: { label: 'Why List Your Service With Us',homeName:'Why List Your Service With Us' } },
 
 
 

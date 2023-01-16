@@ -39,7 +39,11 @@
                     About us
                   </router-link>
                 </li>
-                <li class="link-item">Why list your service with us</li>
+                <li class="link-item">
+                  <router-link :to="{ name: 'why-list' }"   :class="(currentRouteName === 'why-list' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                    Why list your service with us
+                  </router-link>
+                </li>
                 <li class="link-item">
                   <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                     Post free service
@@ -76,7 +80,7 @@
                         FAQs
                       </router-link>
                     </li>    
-                    <li class="link-item"  @click="redirectToLogin">Account Sign In/ Sign Up</li>
+                    <li class="link-item"  @click="login">Account Sign In/ Sign Up</li>
                     <li class="link-item">
                       <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                         Join as a professional
@@ -93,7 +97,7 @@
                   <h6>Customer Care</h6>
                   <ul>
                     <li class="link-item">
-                      <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
+                      <a href="mailto:support@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>support@odealspro.com</span> </a> 
                     </li>
                     <li class="link-item">
                       <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
@@ -130,7 +134,7 @@
                 <div class="card-header" id="headingOne">
                   <h6 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#about" aria-expanded="true" aria-controls="collapseOne">
-                      Discover more about ODeals Pro
+                      Discover more about ODealsPro
                     </button>
                   </h6>
                 </div>
@@ -143,7 +147,11 @@
                           About us
                         </router-link>
                       </li>
-                      <li class="link-item">Why list your service with us</li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'why-list' }"   :class="(currentRouteName === 'why-list' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Why list your service with us
+                        </router-link>
+                      </li>
                       <li class="link-item">
                         <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                           Post free service
@@ -154,6 +162,11 @@
                           FAQs
                         </router-link>
                       </li> 
+                      <li class="link-item">
+                        <router-link :to="{ name: 'contact-us' }"   :class="(currentRouteName === 'contact-us' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Contact us
+                        </router-link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -200,7 +213,7 @@
                   <div class="card-body">
                     <ul>
                       <li class="link-item">
-                        <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
+                        <a href="mailto:support@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>support@odealspro.com</span> </a> 
                       </li>
                       <li class="link-item">
                         <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
@@ -272,7 +285,7 @@
             <div class="search-content">
                 <form>
                     <div class="input-group  mb-0">
-                        <input type="text" placeholder="Search" id="search" class="form-control" @keyup="getServiceList" v-model="keyword" data-bs-toggle="dropdown" aria-expanded="false">
+                        <input type="text" placeholder="What are you looking for?" id="search" class="form-control" @keyup="getServiceList" v-model="keyword" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
                             <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
                             <path d="M18.0186 18.4851L21.5426 22" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -439,7 +452,7 @@ ul{
         top:80px;
         left:-100%;
         background-color:#fff;
-        transition: all 0.8s ease-out;
+        transition: all 0.5s ease-out;
       .menu{
         padding:40px;
         margin:0px !important;

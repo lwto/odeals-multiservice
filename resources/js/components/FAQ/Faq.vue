@@ -5,7 +5,7 @@
         <div class="col-md-8">
           <div id="accordion">
             <div v-for="faq in FAQs" class="card">
-              <div class="card-header" id="headingOne">
+              <div class="card-header" :id="'heading' + faq.id">
                 <h5 class="mb-0">
                   <div class="btn btn-link d-flex gap-3 align-items-center" data-toggle="collapse" :data-target="'#faq' + faq.id" aria-expanded="true" :aria-controls="'#faq' + faq.id">
                     <i class="fas fa-angle-down"></i>
@@ -14,7 +14,7 @@
                 </h5>
               </div>
           
-              <div :id="'faq' + faq.id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div :id="'faq' + faq.id" class="collapse" :aria-labelledby="'heading' + faq.id" data-parent="#accordion">
                 <div class="card-body" style="white-space:pre-line;">{{faq.ans}}</div>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default{
         {
           id:1,
           ques:"How do I book a service?",
-          ans:"If you already register with ODeals. You can choose any service that you prefer and book for the services. If you cannot book the services, please contact our service team via LINE (LINE account: odeals.th)"
+          ans:"If you already register with ODealsPro. You can choose any service that you prefer and book for the services. If you cannot book the services, please contact our service team via LINE (LINE account: odeals.th)"
         },
         {
           id:2,
@@ -79,7 +79,7 @@ export default{
         {
           id:4,
           ques:"Where can I check my booking detail and status?",
-          ans:"You can check via your email that you provide during register ODelas account. Or you can check in your ODeals profile under “My Booking”. You will also be able to see all the appointments you have made under this tab."
+          ans:"You can check via your email that you provide during register ODelas account. Or you can check in your ODealsPro profile under “My Booking”. You will also be able to see all the appointments you have made under this tab."
         },
         {
           id:5,
@@ -90,7 +90,7 @@ export default{
         {
           id:6,
           ques:"How do I know if my booking was cancelled?",
-          ans:"You can check in your ODeals profile under “My Booking”."
+          ans:"You can check in your ODealsPro profile under “My Booking”."
         },
         {
           id:7,
@@ -104,13 +104,13 @@ export default{
         },
         {
           id:10,
-          ques:"How can I pay ODeals Online?",
+          ques:"How can I pay ODealsPro Online?",
           ans:"Pay with Credit/Debit Card, Promptpay \n Pay with Internet Banking or Mobile Banking"
         },
         {
           id:11,
           ques:"How long is my Voucher valid for?",
-          ans:"You can check in your ODeals Profile under 'Voucher'. You will able to see your voucher expired date. "
+          ans:"You can check in your ODealsPro Profile under 'Voucher'. You will able to see your voucher expired date. "
         },
         {
           id:13,

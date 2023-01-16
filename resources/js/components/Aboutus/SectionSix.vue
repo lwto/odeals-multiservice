@@ -11,7 +11,7 @@
                         <form>
                             <div class="input-group mb-0">
                                 <input type="text" :placeholder="__('messages.email')" class="form-control"> 
-                                <button class="subscribe-btn">Subscribe</button>                               
+                                <button class="subscribe-btn odeals-btn">Subscribe</button>                               
                             </div>                
                         </form>
                     </div>
@@ -20,6 +20,17 @@
         </div>
     </section>
 </template>
+<style scoped>
+.news-letter-box{
+    background:#f2f8f0;
+}
+h3{
+    color:#042f16;
+}
+.odeals-btn{
+    background:#109848 !important;
+}
+</style>
 <script>
 export default {
   name: "SectionSix",
