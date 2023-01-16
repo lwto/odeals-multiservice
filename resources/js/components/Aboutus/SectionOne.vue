@@ -1,7 +1,6 @@
 <template>
   <section class="section-one padding-top padding-bot">
     <div class="container">
-
       <div class="row">
         <div class="col-lg-6 about-images">
           <div class="row row-cols-lg-2 row-cols-1">
@@ -41,3 +40,9 @@
     </div>
   </section>
 </template>
+<style scoped>
+
+</style>
+<script>
+
+</script>

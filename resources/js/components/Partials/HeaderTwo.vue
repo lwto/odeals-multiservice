@@ -1,12 +1,15 @@
 <template>
   <div class="header-two">
+    <!-------- Header Top Language ------->
     <div class="top-header">
         <a href="" class="lang">EN</a>
         <a href="" class="lang">ไทย</a>
         <a href="" class="lang">中文</a>
         <a href="" class="lang">မြန်မာ</a>
     </div>
+    <!-------- Header ------->
     <div class="header">
+      <!-------- Header Left ------->
       <div class="header-left col-lg-5">
         <div class="toggle-menu" id="toggle-menu"><i class="fas fa-bars"></i></div>
         <div class="category-menu">
@@ -24,7 +27,9 @@
             Join as Partner
           </router-link>
         </div>
+        <!-------- Nav Menu ------->
         <nav class="nav-menu" id="nav-menu">
+          <!-------- Desktop Menu ------->
           <div class="menu row">
             <div class="about-odeals col-lg-3 col-md-4">
               <h6>Discover ODealsPro</h6>
@@ -84,7 +89,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 customer-care">
                   <h6>Customer Care</h6>
                   <ul>
                     <li class="link-item">
@@ -102,9 +107,118 @@
               </div>
             </div>
           </div>
+          <!-------- Mobile Menu ------->
+          <div class="mobile-menu">
+            <div class="d-flex gap-2 align-items-center mb-2 btn-gp">
+              <router-link :to="{ name: 'category' }" class="btn-mobile" >
+                Home
+              </router-link>
+              <router-link :to="{ name: 'prof-register' }" class="btn-mobile"  >
+                Join as a professional
+              </router-link>
+            </div>
+            <div class="d-flex gap-2 align-items-center mb-3 btn-gp">
+              <router-link :to="{ name: 'category' }" class="btn-mobile">
+                Category
+              </router-link>
+              <router-link :to="{ name: 'service' }" class="btn-mobile" >
+                Service
+              </router-link>
+            </div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h6 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#about" aria-expanded="true" aria-controls="collapseOne">
+                      Discover more about ODeals Pro
+                    </button>
+                  </h6>
+                </div>
+            
+                <div id="about" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'about-us' }"   :class="(currentRouteName === 'about-us' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          About us
+                        </router-link>
+                      </li>
+                      <li class="link-item">Why list your service with us</li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Post free service
+                        </router-link>
+                      </li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'faq' }"   :class="(currentRouteName === 'faq' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          FAQs
+                        </router-link>
+                      </li> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-2">
+                <div class="card-header" id="headingTwo">
+                  <h6 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Important links
+                    </button>
+                  </h6>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'refund-cancellation-policy' }"   :class="(currentRouteName === 'refund-cancellation-policy' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Cancellation & Refund Policy
+                        </router-link>
+                      </li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'term-conditions' }"   :class="(currentRouteName === 'term-conditions' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Terms & Condition
+                        </router-link>
+                      </li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'privacy-policy' }"   :class="(currentRouteName === 'privacy-policy' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Privacy Policy
+                        </router-link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-2">
+                <div class="card-header" id="headingThree">
+                  <h6 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Customer Care
+                    </button>
+                  </h6>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li class="link-item">
+                        <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
+                      </li>
+                      <li class="link-item">
+                        <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
+                      </li>
+                      <div class="d-flex align-items-center apps">
+                        <a class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
+                        <a class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
+                      </div>    
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
         
       </div>
+      <!-------- Brand Logo ------->
       <div class="header-middle col-lg-2">
         <a href="#" class="navbar-brand">
           <router-link :to="{ name: 'frontend-home' }"  ><img :src="generalsetting.site_logo ? generalsetting.site_logo : baseUrl +'/images/logo.svg'" class="img-fluid logo" alt="logo" /></router-link>
@@ -112,6 +226,7 @@
       </div>
       <!-------- Header Right Side -------->
       <div class="header-right col-lg-5">
+        <!-------- Search ------->
         <div class="search">
           <!-- Search Large Device -->
           <div class="input-group search-text search-device-lg" style="width: auto;">
@@ -196,37 +311,44 @@
             </div>
         </div>
         </div>
-        
-       <div class="user-btn position-relative">
-        <div class="user-menu" id="user-menu">
-          <i class="fas fa-user"></i>
+        <!-------- User Login/Register ------->
+        <div class="user-btn position-relative">
+          <div class="user-menu" id="user-menu">
+            <i class="fas fa-user"></i>
+          </div>
+          <div id="user-menu-dropdown">
+            <ul class="list-unstyled mb-0">
+                <li v-if="!isLogged" v-b-modal="'my-modal1'" class="list-link"><a  href="#">{{__('messages.register')}}</a></li>
+                <li  v-if="!isLogged" @click="login" class="list-link"><a  href="#">{{__('messages.login')}}</a></li>
+                <li  v-if="!isLogged" class="list-link">
+                  <router-link :to="{ name: 'prof-register' }">
+                    Join as Partner
+                  </router-link>
+                </li>
+                <li v-if="isLogged">
+                    <a href="#" class="dropdown-item" @click="getHomePage()"
+                    >{{__('messages.dashboard')}}</a
+                    >
+                </li>
+                <li v-if="isLogged">
+                    <a href="#" class="dropdown-item" @click="logout"
+                    >{{__('messages.logout')}}</a
+                    >
+                </li>
+            </ul>       
+          </div>
         </div>
-        <div id="user-menu-dropdown">
-          <ul class="list-unstyled mb-0">
-              <li v-if="!isLogged" v-b-modal="'my-modal1'" class="list-link"><a  href="#">{{__('messages.register')}}</a></li>
-              <li  v-if="!isLogged" @click="login" class="list-link"><a  href="#">{{__('messages.login')}}</a></li>
-              <li v-if="isLogged">
-                  <a href="#" class="dropdown-item" @click="getHomePage()"
-                  >{{__('messages.dashboard')}}</a
-                  >
-              </li>
-              <li v-if="isLogged">
-                  <a href="#" class="dropdown-item" @click="logout"
-                  >{{__('messages.logout')}}</a
-                  >
-              </li>
-          </ul>       
-        </div>
-       </div>
         <div v-if="isLogged" class="user-booking">
-          <router-link :to="{ name: 'booking' }" class="btn btn-sm">
-            {{__('messages.booking')}}
-          </router-link>
+            <router-link :to="{ name: 'booking' }" class="btn btn-sm">
+              {{__('messages.booking')}}
+            </router-link>
         </div>
         <div v-else class="quick-booking" v-b-modal.nearlocation>
           <Button class="btn btn-sm">Booking</Button><br/>
         </div>
       </div>
+
+      <!-------- Near Location Modal ------->
       <b-modal id="nearlocation"  title="Get Nearest Services" header-close-content=" <button type='button' class='btn-close btn-sm' data-bs-dismiss='modal' aria-label='Close'></button>">
         <form class="review-form">
             <p v-if="showofflocation">{{__('messages.location_off')}}</p>
@@ -317,6 +439,7 @@ ul{
         top:80px;
         left:-100%;
         background-color:#fff;
+        transition: all 0.8s ease-out;
       .menu{
         padding:40px;
         margin:0px !important;
@@ -326,30 +449,72 @@ ul{
           padding-bottom:15px;
           color:#042f16;
         }
-        .link-item{
-          padding-bottom:15px;
-          cursor:pointer;
-          a{
-            color:gray;
-            padding:0; 
-            &:hover{
-              color:#109848;
-            }
-            &.active{
-             color:#109848;
-            }
-          }
-          &:hover{
-              color:#109848;
-            }
-        }
-        .social{
-          color:#109848;
-          cursor:pointer;
-        }
       }
       &.active{
         left:0;
+      }
+      .link-item{
+        padding-bottom:15px;
+        cursor:pointer;
+        a{
+          color:gray;
+          padding:0; 
+          &:hover{
+            color:#109848;
+          }
+          &.active{
+           color:#109848;
+          }
+        }
+        &:hover{
+            color:#109848;
+          }
+      }
+      .social{
+        color:#109848;
+        cursor:pointer;
+      }
+      .mobile-menu{
+        border-top:1px solid #eee;
+        display:none;
+        padding:20px;
+        .btn-mobile{
+          text-transform:initial;
+          border:1px solid #109848;
+          width:50%;
+          text-align:center;
+          color:black;
+          padding:10px;
+          border-radius:10px;
+          &:hover{
+            color:white;
+            background:#109848;
+          }
+        }
+        .card{
+          overflow:hidden;
+          border-radius:10px;
+          margin-bottom:10px;
+        }
+        .card-header{
+          padding:0;
+          border-radius:0;
+          background:#F2F8F0;
+          text-align: left;
+        }
+        .card-header h6{
+        margin-bottom:0;
+        .btn{
+          background:#F2F8F0;
+          box-shadow:none;
+          text-align: left;
+          color:black;
+          width:100%;
+          text-transform:none;
+        }
+        }
+        
+        
       }
     }
   }
@@ -451,6 +616,64 @@ ul{
     pointer-events: auto;
     visibility: visible;
   }
+}
+@media (max-width: 992px){
+  .header{
+    .header-left{
+      .category-menu, .service-menu, .join-us,.customer-care{
+        display:none;
+      }
+    }
+    .header-right{
+      flex-grow:1;
+    }
+    .header-left{
+      .nav-menu{
+        min-height:100vh;
+        .menu{
+          display:none;
+        }
+        .mobile-menu{
+          display:block;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .quick-booking, .user-booking{
+    display:none;
+  }
+  .btn-gp{
+    flex-direction:column;
+    .btn-mobile{
+      width:100% !important;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .top-header{
+    column-gap:10px;   
+    .lang{
+      font-size:13px;
+    }
+  }
+  .header{
+    .header-left{
+      padding:0 15px 0px 10px;
+      .toggle-menu i{
+        font-size:1.2rem;
+        padding:8px 12px;
+      } 
+  }
+  .header-right{
+    padding:0 15px;
+    column-gap:10px;
+    .search, .user-menu{
+      font-size:1rem;
+    }
+  }
+}
 }
 </style>
 <script>
