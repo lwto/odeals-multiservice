@@ -4,7 +4,7 @@
         <section-one/>
         <slogan/>
         <price/>
-        <section-four"/>
+        <section-four/>
         <!-- <section-two  :data="jsonData.sectionTwo"/>-->
         <!-- <section-five :data="jsonData.sectionFive"/> -->
         <section-six/>

@@ -12,7 +12,7 @@
               <div class="extra-content">
                <router-link class="extra-page-content" :to="{ name: 'about-us' }"> <label><i class="fas fa-angle-right"></i></label> <span> About us </span> </router-link>
                <router-link class="extra-page-content" :to="{ name: 'why-list' }"> <label><i class="fas fa-angle-right"></i></label> <span>Why list your service with us?</span> </router-link>
-               <router-link class="extra-page-content" :to="{ name: 'post-free-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Post free service</span> </router-link>
+               <router-link class="extra-page-content" :to="{ name: 'post-service' }"> <label><i class="fas fa-angle-right"></i></label> <span>Post free service</span> </router-link>
                <!-- <router-link class="extra-page-content" :to="{ name: 'refund-cancellation-policy' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.cancellation_&_refund_policy')}} </span> </router-link> -->
                 <!-- <router-link :to="{ name: 'contact-us' }" class="extra-page-content"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.contact_us')}} </span> </router-link> -->
                 <!-- <router-link class="extra-page-content" :to="{ name: 'help-support' }"> <label><i class="fas fa-angle-right"></i></label> <span> {{__('messages.help_support')}} </span> </router-link> -->

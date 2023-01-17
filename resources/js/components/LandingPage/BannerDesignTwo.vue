@@ -55,6 +55,9 @@
   margin-right:4px;
   color:#109848;
 }
+h2{
+  color:#000;
+}
 .banner-content .services .service{
   padding:0px 10px;
   border:1px dotted white;

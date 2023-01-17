@@ -1,7 +1,7 @@
 <template>
-  <section class="register-step light-background py-3">
+  <section class="register-step" style="padding:60px 0;">
     <div class="container">
-      <h3 class="text-center mb-5">How to Get Started!</h3>
+      <h3 class="text-center mb-5">How to <span style="color:#109848;">Get Started!</span></h3>
       <div class="row justify-content-between" style="row-gap:10px;">
         <div class="col-lg-3">
           <img src="/images/icon/registered.png" />
@@ -26,14 +26,18 @@
   </section>
 </template>
 <style scoped>
+.register-step{
+  background:#F2F8F0;
+}
 img{
   width:70px;
 }
 h3{
   font-size:2.3rem;
   font-weight:bolder;
+  color:#042f16;
 }
 h4{
-  font-size:1.7rem;
+  font-size:1.5rem;
 }
 </style>

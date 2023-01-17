@@ -1,5 +1,5 @@
 <template>
-  <section class="opportunities">
+  <section class="opportunities" style="margin-bottom:60px;">
     <div class="container">
       <div class="d-flex flex-column justify-content-center opp-banner">
         <h3 class="text-white text-center mb-3">Start Your Entrepreneurial Journey Now!</h3>
@@ -8,8 +8,11 @@
            used products, connecting users that are just a click away.
         </p>
         <div class="text-center">
-          <a @click="redirectToRegister" class="btn btn-primary btn-register mt-3">Register for FREE</a>
-
+          <router-link :to="{ name: 'prof-register' }">
+            <button class="btn odeals-btn mt-3">
+              Register for FREE
+            </button>
+          </router-link>
           <!-- <router-link :to="{ name: 'register' }">
             <button class="btn btn-primary btn-register mt-3">
               Get Started for FREE
@@ -18,7 +21,7 @@
         </div>
       </div>
 
-      <div class="row justify-content-between" style="margin-top:20px; row-gap:10px;">
+      <div class="row justify-content-between" style="margin-top:60px; row-gap:10px;">
         <div class="col-lg-3 col-md-6">
           <h4 class="mb-2">Wide Selection Of Goods</h4>
           <img src="/images/icon/choice.png"/>
@@ -44,6 +47,10 @@
   </section>
 </template>
 <style scoped>
+.odeals-btn{
+  color:#fff;
+  background:#109848;
+}
 .opportunities img{
   width:60px;
   margin-bottom: 8px;
@@ -57,7 +64,8 @@
 }
 h4{
   font-weight: bolder;
-  font-size:1.95rem;
+  font-size:1.75rem;
+  color:#042f16;
 }
 </style>
 <script>

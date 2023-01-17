@@ -325,7 +325,7 @@
         </div>
         </div>
         <!-------- User Login/Register ------->
-        <div class="user-btn position-relative">
+        <div class="user-btn position-relative" id="user-btn">
           <div class="user-menu" id="user-menu">
             <i class="fas fa-user"></i>
           </div>
@@ -404,7 +404,7 @@ ul{
   column-gap:15px;
   justify-content:right;
   background:#109848;
-  transition: all 0.5s ease-out;
+  transition: all 0.35s ease-out;
   .lang{
     color:#F2F8F0;
     font-size:15px;
@@ -731,9 +731,13 @@ export default {
                 jQuery(".search-device-sm").removeClass("search-open");
           }
 
-         if (e.target.parentElement.id == "user-menu") {
+         if (e.target.parentElement.id == "user-btn") {
               jQuery("#user-menu-dropdown").toggleClass("user-menu-open");
-          } else {
+          } 
+          else if (e.target.parentElement.id == "user-menu"){
+            jQuery("#user-menu-dropdown").toggleClass("user-menu-open");
+          }
+          else {
               jQuery("#user-menu-dropdown").removeClass("user-menu-open");
           }
       });
