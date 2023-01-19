@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="header-title text-center">
-                    <h3 class="mb-3">Meet Our leaders</h3>
+                    <h3 class="mb-3">Meet Our Professional</h3>
                     <p>All our service providers are verified
                     </p>
                 </div>

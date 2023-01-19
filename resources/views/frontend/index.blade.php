@@ -11,7 +11,7 @@
     <link rel="shortcut icon" class="site_favicon_preview"
         href="{{ getSingleMedia(settingSession('get'), 'site_favicon', null) }}" />
     <link rel="stylesheet" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
-    <link href="{{ asset('css/frontend.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/frontend.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/frontend/slick.css') }}">
     <link href="{{ asset('/css/frontend/header.css') }}" rel="stylesheet">
 

@@ -26,7 +26,7 @@
                   </div>
               </div>
                 <p class="price">{{data.price_format}}</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p>
+                <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p> -->
               </div>
             </div>  
           </div>

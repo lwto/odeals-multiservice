@@ -114,8 +114,8 @@ export default{
         },
         {
           id:13,
-          ques:"13.	Where do I add my promotional code/discount code?",
-          ans:"When you do the booking there will have place to add 'promotion code/discount code'. If you can not to find place to add, please contact our customer service via Line. "
+          ques:"Where do I add my promotional code/discount code?",
+          ans:"When you do the booking there will have place to add 'promotion code/discount code'."
         },
         {
           id:14,

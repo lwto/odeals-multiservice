@@ -6,7 +6,7 @@
                 <div class="col-lg-6">
                     <div class="contact-info">
                         <h3 class="mb-5">{{__('messages.contact_us_page')}}</h3>
-                        <div v-if="generalsetting.helpline_number" class="icon-box-wrapper">
+                        <!-- <div v-if="generalsetting.helpline_number" class="icon-box-wrapper">
                             <div class="icon-box">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Iconly/Light/Calling">
@@ -22,8 +22,19 @@
                                 <p class="mb-0">{{__('messages.helpline_number')}}</p>
                                 <h6 class="mb-0">{{generalsetting.helpline_number}}</h6>                       
                             </div>
+                        </div> -->
+                        <div class="icon-box-wrapper">
+                            <div class="icon-box">
+                                <svg fill="#109848" width="40px" height="40x" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.52 23.44c-1 0-2-0.6-2.88-1.68-0.040 0-0.040 0-0.080 0-4.16 0-7.56-3.4-7.56-7.56s3.4-7.56 7.56-7.56 7.56 3.4 7.56 7.56c0 2.040-0.8 3.96-2.24 5.36 0.16 1.24-0.040 2.32-0.6 3.040-0.44 0.52-1.080 0.84-1.76 0.84v0zM14.080 20.040c0.28 0 0.52 0.12 0.68 0.36 0.72 1 1.36 1.36 1.76 1.36 0.2 0 0.32-0.080 0.44-0.2 0.32-0.4 0.4-1.2 0.2-2.080-0.080-0.32 0.040-0.64 0.28-0.84 1.28-1.12 2-2.72 2-4.4 0-3.24-2.64-5.88-5.88-5.88s-5.88 2.64-5.88 5.88 2.64 5.88 5.88 5.88c0.12 0 0.28 0 0.4 0 0.040-0.080 0.12-0.080 0.12-0.080zM3.84 25.36c-0.2 0-0.44-0.040-0.6-0.12-0.96-0.32-1.72-1.48-1.48-3.36-1.12-1.12-1.76-2.68-1.76-4.28 0-2.56 1.52-4.8 3.88-5.72 0.44-0.16 0.92 0.040 1.080 0.48s-0.040 0.92-0.48 1.080c-1.68 0.68-2.8 2.32-2.8 4.16 0 1.28 0.56 2.52 1.52 3.36 0.040 0.040 0.080 0.080 0.12 0.12 0.16 0.2 0.24 0.44 0.16 0.72-0.24 1.24 0.12 1.8 0.32 1.88 0.24 0.080 0.76-0.24 1.2-1.16 0.16-0.32 0.48-0.48 0.8-0.48 0.84 0.040 1.72-0.12 2.48-0.56 0.4-0.24 0.92-0.080 1.16 0.32s0.080 0.92-0.32 1.16c-0.88 0.48-1.88 0.76-2.88 0.76-0.76 1.2-1.68 1.64-2.4 1.64z"></path>
+                                </svg>
+                            </div>
+                            <div class="icon-content">
+                                <p class="mb-0">Line ID</p>
+                                <h6 class="mb-0">odeals.th</h6>                       
+                            </div>
                         </div>
-                        <div v-if="generalsetting.inquriy_email"  class="icon-box-wrapper">
+                        <div class="icon-box-wrapper">
                             <div class="icon-box">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Iconly/Light/Message">
@@ -35,8 +46,8 @@
                                 </svg>
                             </div>
                             <div class="icon-content">
-                                <p class="mb-0">{{__('messages.inquriy_email')}}</p>
-                                <h6 class="mb-0"><a class="mailto" v-bind:href="'mailto:'+generalsetting.inquriy_email">{{generalsetting.inquriy_email}}</a></h6>                       
+                                <p class="mb-0">Support Email</p>
+                                <h6 class="mb-0"><a class="mailto" href="mailto:support@odealpro.com">support@odealspro.com</a></h6>                       
                             </div>
                         </div>
                         <div class="separator">               

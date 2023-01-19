@@ -131,7 +131,7 @@
           </div>
         </div> -->
       </div>
-      <!-- <cookie-law theme="dark-lime"></cookie-law> -->
+      
     </div>
     <div class="footer-bot">
       <div class="container">
@@ -152,6 +152,7 @@
           </div>
         </div>
       </div>
+      <cookie-law theme="dark-lime"></cookie-law>
 </footer>
 </template>
 <style scoped>

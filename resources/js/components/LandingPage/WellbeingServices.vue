@@ -1,7 +1,7 @@
 <template>
   <section class="wellbeing-services">
     <div class="container">
-      <h3 class="text-center mb-5">Worth The Try</h3>
+      <h3 class="text-center mb-5">Top Rated Services</h3>
       <div class="deals row align-items-center justify-content-center" style="row-gap:15px;">
         <div class="col-lg-8">
           <div class="row justify-content-between" style="row-gap:15px;">

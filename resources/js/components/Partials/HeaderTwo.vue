@@ -80,10 +80,15 @@
                         FAQs
                       </router-link>
                     </li>    
-                    <li class="link-item"  @click="login">Account Sign In/ Sign Up</li>
+                    <!-- <li class="link-item"  @click="login">Account Sign In/ Sign Up</li> -->
+                    <li class="link-item">
+                      <router-link :to="{ name: 'login' }"   :class="(currentRouteName === 'login' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                        Account Sign In/ Sign Up
+                      </router-link>
+                    </li>
                     <li class="link-item">
                       <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
-                        Join as a professional
+                        Join as Partner
                       </router-link>
                     </li>
                     <li class="link-item">
@@ -114,11 +119,11 @@
           <!-------- Mobile Menu ------->
           <div class="mobile-menu">
             <div class="d-flex gap-2 align-items-center mb-2 btn-gp">
-              <router-link :to="{ name: 'category' }" class="btn-mobile" >
+              <router-link :to="{ name: 'frontend-home' }" class="btn-mobile" >
                 Home
               </router-link>
               <router-link :to="{ name: 'prof-register' }" class="btn-mobile"  >
-                Join as a professional
+                Join as Partner
               </router-link>
             </div>
             <div class="d-flex gap-2 align-items-center mb-3 btn-gp">
@@ -331,8 +336,16 @@
           </div>
           <div id="user-menu-dropdown">
             <ul class="list-unstyled mb-0">
-                <li v-if="!isLogged" v-b-modal="'my-modal1'" class="list-link"><a  href="#">{{__('messages.register')}}</a></li>
-                <li  v-if="!isLogged" @click="login" class="list-link"><a  href="#">{{__('messages.login')}}</a></li>
+                <li v-if="!isLogged" class="list-link">
+                  <router-link :to="{ name: 'login' }">
+                    {{__('messages.login')}}
+                  </router-link>
+                </li>
+                <li v-if="!isLogged" class="list-link">
+                  <router-link :to="{ name: 'register' }">
+                    {{__('messages.register')}}
+                  </router-link>
+                </li>                
                 <li  v-if="!isLogged" class="list-link">
                   <router-link :to="{ name: 'prof-register' }">
                     Join as Partner
@@ -749,10 +762,12 @@ export default {
 
       //Remove menu 
       const navLink = document.querySelectorAll('.link-item');
+      const btnMobile = document.querySelectorAll('.btn-mobile');
       function linkAction() {
         jQuery("#nav-menu").removeClass('active');
       }
       navLink.forEach(n => n.addEventListener('click', linkAction));
+      btnMobile.forEach(n => n.addEventListener('click', linkAction));
 
       // Change background header
       function scrollHeader() {

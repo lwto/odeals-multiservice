@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal ref="loginmodal" id="my-modal" title="Login">
+        <b-modal ref="loginmodal" id="my-modal" title="Log in to ODealsPro">
             <form action="javascript:void(0)" class="row" method="post">
                 <div class="form-group col-12">
                     <label for="email" class="font-weight-bold">{{__('auth.email')}}</label>
@@ -40,7 +40,7 @@
                     <label
                         class="d-flex align-items-center justify-content-center flex-column"
                     >{{__('auth.dont_have_account')}}
-                        <div v-b-modal="'my-modal1'" @click="closeloginmodal">
+                        <div v-b-modal="'my-modal3'" @click="closeloginmodal">
                             <a href="#">{{__('auth.signup')}}</a>
                         </div></label
                     >

@@ -6,7 +6,16 @@
         <div class="banner-content">
           <h2>Find The Right</h2>
           <h2 class="font-weight-bolder"><span>Home</span> Services Around You</h2>
-          <form>
+
+          <h4 class="mt-4 mb-3">Be our partner. Join us now!</h4>
+          <div class="d-flex gap-3 mt-5">
+            <router-link :to="{ name: 'prof-register' }" class="btn btn-primary"  >
+              Join as Partner
+            </router-link>
+            <button v-b-modal="'my-modal3'" class="btn btn-primary">Join as User</button>
+
+          </div>
+          <!-- <form>
             <div class="row d-flex mt-4" style="column-gap:10px; row-gap:15px;">
               <div class=" col-sm-10 col-md-6 col-lg-7">
                 <input type="text" class="form-control" placeholder="What are you Looking for?">
@@ -16,13 +25,13 @@
               </div>
             </div>
             <button class="btn btn-primary mt-4">Search</button>
-          </form>
-          <div class="services mt-4 d-flex align-items-center flex-wrap">
+          </form> -->
+          <!-- <div class="services mt-4 d-flex align-items-center flex-wrap">
             <p><i class="fas fa-circle"></i>Services</p>
             <p class="service">AC Installation</p>
             <p Class="service">Nail Spa</p>
             <p Class="service">Personal Trainer</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-lg-5">
@@ -32,6 +41,7 @@
       </div>
     </div>
   </div>
+  <Register/>
 </section>
 </template>
 <style scoped>
@@ -66,6 +76,7 @@ h2{
   margin-left:15px;
   border-radius:4px;
   font-size:14px;
+  cursor:pointer;
 }
 input{
   border-radius:4px;
@@ -90,5 +101,8 @@ input{
 }
 </style>
 <script>
-
+import Register from '../../views/Auth/Register.vue';
+export default {
+  components: { Register },
+}
 </script>
