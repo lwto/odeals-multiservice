@@ -226,8 +226,7 @@
             </div>
       </b-modal>
    </div>
-    <!-- <login-component ref="openModal" /> -->
-    <LoginTwo ref="openModal" />
+    <login-component ref="openModal" />
    </div>
 </div>
 </template>
@@ -254,11 +253,9 @@ import { mapGetters } from "vuex";
 import {post} from '../../request'
 import { displayMessage } from "../../messages";
 import { required } from 'vuelidate/lib/validators'
-import LoginTwo from '../../views/Auth/LoginTwo.vue';
 
 export default {
   name: 'Wizard',
-  components: { LoginTwo },
     validations: {
         address: {required},
        

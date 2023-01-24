@@ -21,7 +21,7 @@
               </p>
             </div>
             <div class="col-lg-6 px-0">
-              <div v-if="slider" class="swiper-container adsBanner">
+              <div class="swiper-container adsBanner">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ">
                         <div class="inner-content d-flex justify-content-center">

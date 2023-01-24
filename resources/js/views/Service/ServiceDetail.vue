@@ -222,6 +222,7 @@
 </div>
 </template>
 <script>
+
 import {post} from '../../request'
 import Favorite from '../../components/Global/Favorite.vue'
 export default {

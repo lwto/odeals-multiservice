@@ -10,18 +10,15 @@
                     <div class="provider-box" v-if="index < 5" >
                         <div class="img-box">
                             <router-link :to="{ name: 'provider-service',params: { provider_id: data.id }}">
-                           <div class="team-img">
-                            <img :src="data.profile_image"  class=""  alt="">
-                           </div> 
+                            <div class="team-img">
+                                <img :src="data.profile_image"  class=""  alt="">
+                            </div> 
                             </router-link>
-                            <div class="certi-box">
-                                <img src="images/approved.png"/>
+                            <div class="provider-box-content">
+                                <h6>{{data.display_name}}</h6>
+                                <span class="provider-desc">{{data.providertype}}</span>
                             </div>
-                        </div>
-                        <div class="provider-box-content">
-                            <h6>{{data.display_name}}</h6>
-                            <span class="provider-desc">{{data.providertype}}</span>
-                        </div>
+                        </div>                       
                     </div>
                 </div>
             </div>
@@ -49,24 +46,42 @@
 .our-provider .provider-box .img-box .certi-box img{
     width:50px;
 }
-
+.provider-box-content{
+    position:absolute;
+    bottom: 10px;
+    left:10px;
+    right:10px;
+    margin:0 auto;
+    background-color: #123f03a5;
+    padding:10px !important;
+    border-radius:15px;
+    z-index:1;
+}
 .provider-box-content h6{
-    color:#042f16;
+    color:#f2f8f0;
+    font-size:18px;
 }
 .provider-box-content span{
-    color:#109848;
+    color:#fff;
+    font-size:15px;
 }
 .provider-box{
     width:200px;
+    border-radius: 14px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .our-provider .provider-box .img-box .team-img {
     overflow:hidden;
     object-fit:cover;
     object-position:center;
-    height:150px;
+    height:250px;
+    border-radius: 14px;
 }
 img{
     width:100%;
+    height:100%;
+    object-fit: cover;
+   
 }
 h3{
     color:#042f16;
@@ -74,6 +89,15 @@ h3{
 .link-btn-box{
     background:#109848;
     color:white;
+}
+@media only screen and (max-width: 576px){
+    .provider-box{
+        width:90%;
+    }
+    .our-provider .provider-box .img-box .team-img {
+        height:350px;
+    }
+
 }
 </style>
 <script>

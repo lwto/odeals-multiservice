@@ -334,6 +334,19 @@
           <div class="user-menu" id="user-menu">
             <i class="fas fa-user"></i>
           </div>
+          <!-- <a 
+            href="#"
+            class="nav-link search-toggle p-0"/
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            @click="openDropdown"
+          >
+            <img
+              :src="userData.profile_image ? userData.profile_image : baseUrl+'/images/user/user.png'"
+              alt="User-Profile"
+              class="img-fluid user-image avatar avatar-rounded"
+            />                      
+          </a> -->
           <div id="user-menu-dropdown">
             <ul class="list-unstyled mb-0">
                 <li v-if="!isLogged" class="list-link">
@@ -352,12 +365,44 @@
                   </router-link>
                 </li>
                 <li v-if="isLogged">
-                    <a href="#" class="dropdown-item" @click="getHomePage()"
-                    >{{__('messages.dashboard')}}</a
+                  <router-link class="dropdown-item list-link" :to="{ name: 'frontend-home' }"
+                  >Home</router-link
+                  >
+                </li>
+                <li v-if="isLogged">
+                    <a href="#" class="dropdown-item list-link" @click="getHomePage()"
+                    >Profile</a
                     >
                 </li>
                 <li v-if="isLogged">
-                    <a href="#" class="dropdown-item" @click="logout"
+                  <router-link :to="{ name: 'booking' }" class="dropdown-item list-link"
+                  >
+                  Bookings
+                  </router-link
+                  >
+                </li>
+                <li v-if="isLogged">
+                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
+                  >Cards</a
+                  >
+                </li>
+                <li v-if="isLogged">
+                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
+                  >My Vouchers</a
+                  >
+                </li>
+                <li v-if="isLogged">
+                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
+                  >Referal</a
+                  >
+                </li>
+                <li v-if="isLogged">
+                  <router-link class="dropdown-item list-link" :to="{ name: 'user-favourite' }"
+                  >{{__('messages.favorite_list')}}</router-link
+                  >
+                </li>
+                <li v-if="isLogged">
+                    <a href="#" class="dropdown-item list-link" @click="logout"
                     >{{__('messages.logout')}}</a
                     >
                 </li>

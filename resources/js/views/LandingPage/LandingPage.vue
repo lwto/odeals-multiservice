@@ -9,7 +9,7 @@
         <offer/>
         <house-services/>
         <wellbeing-services/>
-        <provider/>
+        <Provider/>
         
         <!-- 
         <category/>
@@ -33,6 +33,7 @@ import CustomerRating from '../../components/LandingPage/CustomerRating.vue'
 import FeaturedService from '../../components/LandingPage/FeaturedService.vue'
 import Offer from '../../components/LandingPage/Offer.vue'
 import Provider from '../../components/LandingPage/Provider.vue'
+import ProviderTwo from '../../components/LandingPage/ProviderTwo.vue'
 import Service from '../../components/LandingPage/Service.vue'
 import PromoBanner from '../../components/LandingPage/promoBanner.vue'
 import AdsSection from '../../components/LandingPage/AdsSection.vue'
@@ -61,7 +62,9 @@ export default {
         CustomerRating, 
         App, 
         FeaturedService, 
-        Provider },
+        Provider,
+        ProviderTwo,
+     },
     mounted(){
         this.$store.dispatch('dashboardData');
     },

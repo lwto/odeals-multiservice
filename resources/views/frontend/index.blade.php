@@ -25,7 +25,6 @@
     <div id="app">
         <Default></Default>
     </div>
-    <script src="{{ asset('js/header.js') }}"></script>
     <script src="{{ asset('js/frontend.min.js') }}" defer></script>
 </body>
 
