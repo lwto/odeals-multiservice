@@ -12,7 +12,9 @@
             <router-link :to="{ name: 'prof-register' }" class="btn btn-primary"  >
               Join as Partner
             </router-link>
-            <button v-b-modal="'my-modal3'" class="btn btn-primary">Join as User</button>
+            <router-link :to="{ name: 'register' }" class="btn btn-primary"  >
+              Join as User
+            </router-link>
 
           </div>
           <!-- <form>

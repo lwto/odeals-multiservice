@@ -365,11 +365,6 @@
                   </router-link>
                 </li>
                 <li v-if="isLogged">
-                  <router-link class="dropdown-item list-link" :to="{ name: 'frontend-home' }"
-                  >Home</router-link
-                  >
-                </li>
-                <li v-if="isLogged">
                     <a href="#" class="dropdown-item list-link" @click="getHomePage()"
                     >Profile</a
                     >
@@ -379,21 +374,6 @@
                   >
                   Bookings
                   </router-link
-                  >
-                </li>
-                <li v-if="isLogged">
-                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
-                  >Cards</a
-                  >
-                </li>
-                <li v-if="isLogged">
-                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
-                  >My Vouchers</a
-                  >
-                </li>
-                <li v-if="isLogged">
-                  <a href="#" class="dropdown-item list-link" @click="getHomePage()"
-                  >Referal</a
                   >
                 </li>
                 <li v-if="isLogged">

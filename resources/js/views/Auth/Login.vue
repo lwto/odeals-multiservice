@@ -64,9 +64,9 @@
                         </div></label
                     >
                 </div>
-                <div class="col-12 text-center mt-2 odeals-login"  :class="(currentRouteName === 'booking' ? 'hide' : '' )">
+                <!-- <div class="col-12 text-center mt-2 odeals-login">
                     <a @click="redirectToLogin" class="btn btn-primary btn-sm float-right"> PROVIDER | ODEALS PRO LOGIN</a>
-                </div>
+                </div> -->
             </form>
         </b-modal>
     </div>
@@ -136,9 +136,6 @@ export default {
   position: absolute;
   right:2rem;
   top:50px
-}
-.odeals-login.hide{
-    display:none;
 }
 .btn-facebook, .btn-google{
     width:100%;
