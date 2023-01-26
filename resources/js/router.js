@@ -27,10 +27,6 @@ import LoginPage from "./views/LoginPage/LoginPage";
 import FAQ from "./views/FAQ/FAQ.vue";
 import ProfessionalRegisterPage from "./views/ProfessionalRegisterPage/ProfessionalRegisterPage";
 import WhyList from "./views/WhyList/WhyList.vue";
-import Referral from "./views/UserDashboard/Referral.vue";
-import Vouchers from "./views/UserDashboard/Vouchers.vue";
-import Cards from "./views/UserDashboard/Cards.vue";
-import AccountDetails from "./views/UserDashboard/AccountDetail.vue";
 
 const routes = [
     { path: '/', name: 'frontend-home', component: LandingPage, meta: { label: 'Home' } },
@@ -58,11 +54,6 @@ const routes = [
     { path: '/professional-register', name: 'prof-register', component: ProfessionalRegisterPage, meta: { label: 'Professional Register Page',homeName:'Professional Register Page' } },
     { path: '/faq', name: 'faq', component: FAQ, meta: { label: 'FAQs',homeName:'Frequently Ask Questions' } },
     { path: '/why-list-service', name: 'why-list', component: WhyList, meta: { label: 'Why List Your Service With Us',homeName:'Why List Your Service With Us' } },
-    { path: '/referral', name: 'referral', component: Referral, meta: { label: 'Referral',homeName:'referral' } },
-    { path: '/vouchers', name: 'vouchers', component: Vouchers, meta: { label: 'Vouchers',homeName:'vouchers' } },
-    { path: '/cards', name: 'cards', component: Cards, meta: { label: 'Cards',homeName:'cards' } },
-    { path: '/account-details', name: 'account', component: AccountDetails, meta: { label: 'Account Details',homeName:'Account Deatils' } },
-
 
 
 ];
