@@ -108,8 +108,8 @@
                       <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                     </li>
                     <div class="d-flex align-items-center apps">
-                      <a class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
-                      <a class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
+                      <a href="https://line.me/en/" class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089713154026" class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
                     </div>    
                   </ul>
                 </div>
@@ -224,8 +224,8 @@
                         <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                       </li>
                       <div class="d-flex align-items-center apps">
-                        <a class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
-                        <a class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
+                        <a href="https://line.me/en/" class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100089713154026" class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
                       </div>    
                     </ul>
                   </div>

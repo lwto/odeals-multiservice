@@ -33,8 +33,8 @@
                <a href="mailto:support@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>support@odealspro.com</span> </a> 
                <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                <div class="d-flex align-items-center mt-3 apps">
-                <a class="social"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
-                <a class="social"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>
+                <a href="https://line.me/en/" class="social"><i class="fab fa-line" style="font-size:1.75rem; margin-right:15px;"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100089713154026" class="social"><i class="fab fa-facebook" style="font-size:1.75rem"></i></a>
               </div>
               </div>
             </div>
