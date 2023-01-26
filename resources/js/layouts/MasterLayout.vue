@@ -6,7 +6,6 @@
         <main class="main-content">
             <div class="position-relative">
                 <header>
-                   <!-- <Header/> -->
                    <HeaderTwo/>
                 </header>
             </div>
@@ -19,12 +18,11 @@
 </template>
 <script>
 import Loader from "../components/Partials/Loader";
-import Header from "../components/Partials/Header";
 import Footer from '../components/Partials/Footer';
 import HeaderTwo from "../components/Partials/HeaderTwo.vue";
 export  default {
     name:'MasterLayout',
-    components: {Header, Loader,Footer, HeaderTwo}
+    components: {Loader,Footer, HeaderTwo}
 }
 </script>
 
