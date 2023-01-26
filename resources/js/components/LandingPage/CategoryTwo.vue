@@ -4,23 +4,21 @@
     <div v-if="slider" class="swiper-container category-swiper">
       <div class="swiper-wrapper">
         <div v-for="(cat, index) in category" :key="index" class="swiper-slide">
-          <div class="inner-content d-flex justify-content-center">
-              <router-link 
-                :to="{
-                  name: 'category-detail',
-                  params: { category_id: cat.id },
-                }"
-              >
-                <div class="category text-center">
-                  
-                  <img :src="cat.category_image" alt="image"/>
-                 
-                    <h6 class="categories-name">
-                        {{cat.name}}
-                    </h6>
-                </div>
-              </router-link>
-          </div>
+          <router-link 
+            :to="{
+              name: 'category-detail',
+              params: { category_id: cat.id },
+            }"
+          >
+            <div class="inner-content d-flex justify-content-center circle-clip-effect">
+              <div class="category text-center">
+                <img :src="cat.category_image" alt="image"/>
+                <h6 class="categories-name">
+                  {{cat.name}}
+                </h6>
+              </div>
+            </div>
+          </router-link>
         </div>
   
       </div>
@@ -33,6 +31,7 @@
 </section>
 </template>
 <style scoped>
+
 .category-two{
   padding:60px 0;
 }
@@ -45,12 +44,14 @@ img{
   border:1px solid #F2F8F0;
   border-radius:4px;
   padding: 20px;
-  width:180px;
   height:160px;
+  width:100%;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  z-index:100;
 }
+
 .categories-name{
   margin-top:15px;
   text-align: center;
@@ -64,6 +65,12 @@ img{
   background:#F2F8F0;
   border-radius:50%;
   cursor:pointer;
+}
+.circle-clip-effect{
+  border:0px;
+}
+.category:hover .categories-name{
+  color:#fff;
 }
 </style>
 
@@ -83,7 +90,7 @@ export default {
         // autoplay:{delay: 6000},
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 20,
         observer: true,  
         observeParents: true,
         navigation: {
@@ -95,13 +102,13 @@ export default {
             clickable: true,
         },
         breakpoints: {
-            389: { slidesPerView: 2 },
+            389: { slidesPerView: 1.5 },
             550: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            991: { slidesPerView: 4},
-            1400: { slidesPerView: 5 },
-            1500: { slidesPerView: 6 },
-            1920: { slidesPerView: 6},
+            768: { slidesPerView: 2.5 },
+            991: { slidesPerView: 3.5},
+            1400: { slidesPerView: 4.5 },
+            1500: { slidesPerView: 5.5 },
+            1920: { slidesPerView: 5.5},
             },
         });
     

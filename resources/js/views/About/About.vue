@@ -4,7 +4,7 @@
         <section-one/>
         <slogan/>
         <price/>
-        <section-four :data="jsonData.sectionFour"/>
+        <section-four/>
         <!-- <section-two  :data="jsonData.sectionTwo"/>-->
         <!-- <section-five :data="jsonData.sectionFive"/> -->
         <section-six/>
@@ -23,16 +23,9 @@ export default {
     name:'About',
     data(){
         return{
-            jsonData:{},
             baseUrl: window.baseUrl
         }
     },
     components: { SectionTwo, SectionFour, SectionFive, SectionSix, Slogan, SectionOne, Price },
-    mounted() {
-      axios.get(this.baseUrl + "/about-us.json")
-      .then((response) => {
-        this.jsonData = response.data;
-      });
-    },
 }
 </script>

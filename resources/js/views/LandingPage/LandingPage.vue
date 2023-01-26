@@ -9,13 +9,11 @@
         <offer/>
         <house-services/>
         <wellbeing-services/>
-        <provider/>
+        <Provider/>
         
         <!-- 
         <category/>
-        <promo-img-banner/>
         <service/>
-        
         <price/>
         <customer-rating/>
         <app/>
@@ -37,7 +35,6 @@ import Provider from '../../components/LandingPage/Provider.vue'
 import Service from '../../components/LandingPage/Service.vue'
 import PromoBanner from '../../components/LandingPage/promoBanner.vue'
 import AdsSection from '../../components/LandingPage/AdsSection.vue'
-import PromoImgBanner from '../../components/LandingPage/promoImgBanner.vue'
 import BannerTwo from '../../components/LandingPage/BannerDesignTwo.vue'
 import CategoryTwo from '../../components/LandingPage/CategoryTwo.vue'
 import FeaturedServicesTwo from '../../components/LandingPage/FeaturedServicesTwo.vue'
@@ -58,13 +55,13 @@ export default {
         Banner, 
         AdsSection, 
         Category,
-        PromoImgBanner, 
         Service, 
         Offer, 
         CustomerRating, 
         App, 
         FeaturedService, 
-        Provider },
+        Provider,
+     },
     mounted(){
         this.$store.dispatch('dashboardData');
     },

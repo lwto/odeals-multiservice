@@ -23,9 +23,9 @@
           </router-link>
         </div>
         <div class="join-us">
-          <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+          <a href="#" target="_blank">
             Join as Partner
-          </router-link>
+          </a>
         </div>
         <!-------- Nav Menu ------->
         <nav class="nav-menu" id="nav-menu">
@@ -39,7 +39,11 @@
                     About us
                   </router-link>
                 </li>
-                <li class="link-item">Why list your service with us</li>
+                <li class="link-item">
+                  <router-link :to="{ name: 'why-list' }"   :class="(currentRouteName === 'why-list' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                    Why list your service with us
+                  </router-link>
+                </li>
                 <li class="link-item">
                   <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                     Post free service
@@ -76,11 +80,16 @@
                         FAQs
                       </router-link>
                     </li>    
-                    <li class="link-item"  @click="redirectToLogin">Account Sign In/ Sign Up</li>
+                    <!-- <li class="link-item"  @click="login">Account Sign In/ Sign Up</li> -->
                     <li class="link-item">
-                      <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
-                        Join as a professional
+                      <router-link :to="{ name: 'login' }"   :class="(currentRouteName === 'login' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                        Account Sign In/ Sign Up
                       </router-link>
+                    </li>
+                    <li class="link-item">
+                      <a href="#" target="_blank">
+                        Join as Partner
+                      </a>
                     </li>
                     <li class="link-item">
                       <router-link :to="{ name: 'contact-us' }"   :class="(currentRouteName === 'contact-us' ? activeRouteClass + ' nav-link' : 'nav-link' )">
@@ -93,14 +102,14 @@
                   <h6>Customer Care</h6>
                   <ul>
                     <li class="link-item">
-                      <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
+                      <a href="mailto:support@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>support@odealspro.com</span> </a> 
                     </li>
                     <li class="link-item">
                       <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                     </li>
                     <div class="d-flex align-items-center apps">
-                      <a class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
-                      <a class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
+                      <a href="https://line.me/en/" class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=100089713154026" class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
                     </div>    
                   </ul>
                 </div>
@@ -110,12 +119,12 @@
           <!-------- Mobile Menu ------->
           <div class="mobile-menu">
             <div class="d-flex gap-2 align-items-center mb-2 btn-gp">
-              <router-link :to="{ name: 'category' }" class="btn-mobile" >
+              <router-link :to="{ name: 'frontend-home' }" class="btn-mobile" >
                 Home
               </router-link>
-              <router-link :to="{ name: 'prof-register' }" class="btn-mobile"  >
-                Join as a professional
-              </router-link>
+              <a href="#" target="_blank" class="btn-mobile"  >
+                Join as Partner
+              </a>
             </div>
             <div class="d-flex gap-2 align-items-center mb-3 btn-gp">
               <router-link :to="{ name: 'category' }" class="btn-mobile">
@@ -130,7 +139,7 @@
                 <div class="card-header" id="headingOne">
                   <h6 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#about" aria-expanded="true" aria-controls="collapseOne">
-                      Discover more about ODeals Pro
+                      Discover more about ODealsPro
                     </button>
                   </h6>
                 </div>
@@ -143,7 +152,11 @@
                           About us
                         </router-link>
                       </li>
-                      <li class="link-item">Why list your service with us</li>
+                      <li class="link-item">
+                        <router-link :to="{ name: 'why-list' }"   :class="(currentRouteName === 'why-list' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Why list your service with us
+                        </router-link>
+                      </li>
                       <li class="link-item">
                         <router-link :to="{ name: 'post-service' }"   :class="(currentRouteName === 'post-service' ? activeRouteClass + ' nav-link' : 'nav-link' )">
                           Post free service
@@ -154,6 +167,11 @@
                           FAQs
                         </router-link>
                       </li> 
+                      <li class="link-item">
+                        <router-link :to="{ name: 'contact-us' }"   :class="(currentRouteName === 'contact-us' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                          Contact us
+                        </router-link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -200,14 +218,14 @@
                   <div class="card-body">
                     <ul>
                       <li class="link-item">
-                        <a href="mailto:customer@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>help@odealspro.com</span> </a> 
+                        <a href="mailto:support@odealspro.com" class="extra-page-content"><label><i class="fas fa-envelope"></i></label> <span>support@odealspro.com</span> </a> 
                       </li>
                       <li class="link-item">
                         <a class="extra-page-content"><label><i class="fas fa-phone-alt"></i></label> <span>Line ID: odeals.th</span> </a> 
                       </li>
                       <div class="d-flex align-items-center apps">
-                        <a class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
-                        <a class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
+                        <a href="https://line.me/en/" class="social"><i class="fab fa-line" style="font-size:1.5rem; margin-right:15px;"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100089713154026" class="social"><i class="fab fa-facebook" style="font-size:1.5rem"></i></a>
                       </div>    
                     </ul>
                   </div>
@@ -272,7 +290,7 @@
             <div class="search-content">
                 <form>
                     <div class="input-group  mb-0">
-                        <input type="text" placeholder="Search" id="search" class="form-control" @keyup="getServiceList" v-model="keyword" data-bs-toggle="dropdown" aria-expanded="false">
+                        <input type="text" placeholder="What are you looking for?" id="search" class="form-control" @keyup="getServiceList" v-model="keyword" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="search-icon">
                             <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
                             <path d="M18.0186 18.4851L21.5426 22" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -312,39 +330,49 @@
         </div>
         </div>
         <!-------- User Login/Register ------->
-        <div class="user-btn position-relative">
+        <div class="user-btn position-relative" id="user-btn">
           <div class="user-menu" id="user-menu">
             <i class="fas fa-user"></i>
           </div>
           <div id="user-menu-dropdown">
             <ul class="list-unstyled mb-0">
-                <li v-if="!isLogged" v-b-modal="'my-modal1'" class="list-link"><a  href="#">{{__('messages.register')}}</a></li>
-                <li  v-if="!isLogged" @click="login" class="list-link"><a  href="#">{{__('messages.login')}}</a></li>
-                <li  v-if="!isLogged" class="list-link">
-                  <router-link :to="{ name: 'prof-register' }">
-                    Join as Partner
+                <li v-if="!isLogged" class="list-link">
+                  <router-link :to="{ name: 'login' }">
+                    {{__('messages.login')}}
                   </router-link>
                 </li>
+                <li v-if="!isLogged" class="list-link">
+                  <router-link :to="{ name: 'register' }">
+                    {{__('messages.register')}}
+                  </router-link>
+                </li>                
                 <li v-if="isLogged">
-                    <a href="#" class="dropdown-item" @click="getHomePage()"
-                    >{{__('messages.dashboard')}}</a
+                    <a href="#" class="dropdown-item list-link" @click="getHomePage()"
+                    >Dashboard</a
                     >
                 </li>
                 <li v-if="isLogged">
-                    <a href="#" class="dropdown-item" @click="logout"
+                  <router-link :to="{ name: 'booking' }" class="dropdown-item list-link"
+                  >
+                  Bookings
+                  </router-link
+                  >
+                </li>
+                <li v-if="isLogged">
+                  <router-link class="dropdown-item list-link" :to="{ name: 'user-favourite' }"
+                  >{{__('messages.favorite_list')}}</router-link
+                  >
+                </li>
+                <li v-if="isLogged">
+                    <a href="#" class="dropdown-item list-link" @click="logout"
                     >{{__('messages.logout')}}</a
                     >
                 </li>
             </ul>       
           </div>
         </div>
-        <div v-if="isLogged" class="user-booking">
-            <router-link :to="{ name: 'booking' }" class="btn btn-sm">
-              {{__('messages.booking')}}
-            </router-link>
-        </div>
-        <div v-else class="quick-booking" v-b-modal.nearlocation>
-          <Button class="btn btn-sm">Booking</Button><br/>
+        <div class="quick-booking" v-b-modal.nearlocation>
+          <Button class="btn btn-sm">Quick Booking</Button><br/>
         </div>
       </div>
 
@@ -377,6 +405,9 @@ ul{
   padding:0;
   margin:0;
 }
+.dropdown-item{
+  padding:15px;
+}
 .language-switcher{
   border:none;
   outline:none;
@@ -391,7 +422,7 @@ ul{
   column-gap:15px;
   justify-content:right;
   background:#109848;
-  transition: all 0.5s ease-out;
+  transition: all 0.35s ease-out;
   .lang{
     color:#F2F8F0;
     font-size:15px;
@@ -439,7 +470,7 @@ ul{
         top:80px;
         left:-100%;
         background-color:#fff;
-        transition: all 0.8s ease-out;
+        transition: all 0.5s ease-out;
       .menu{
         padding:40px;
         margin:0px !important;
@@ -718,9 +749,13 @@ export default {
                 jQuery(".search-device-sm").removeClass("search-open");
           }
 
-         if (e.target.parentElement.id == "user-menu") {
+         if (e.target.parentElement.id == "user-btn") {
               jQuery("#user-menu-dropdown").toggleClass("user-menu-open");
-          } else {
+          } 
+          else if (e.target.parentElement.id == "user-menu"){
+            jQuery("#user-menu-dropdown").toggleClass("user-menu-open");
+          }
+          else {
               jQuery("#user-menu-dropdown").removeClass("user-menu-open");
           }
       });
@@ -732,10 +767,12 @@ export default {
 
       //Remove menu 
       const navLink = document.querySelectorAll('.link-item');
+      const btnMobile = document.querySelectorAll('.btn-mobile');
       function linkAction() {
         jQuery("#nav-menu").removeClass('active');
       }
       navLink.forEach(n => n.addEventListener('click', linkAction));
+      btnMobile.forEach(n => n.addEventListener('click', linkAction));
 
       // Change background header
       function scrollHeader() {

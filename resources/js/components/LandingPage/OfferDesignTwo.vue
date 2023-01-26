@@ -5,7 +5,7 @@
       <div  class="swiper-container offerSlider">
         <div class="swiper-wrapper">
             <div  class="swiper-slide" v-for="(data,index) in discountservice" :key="index">
-                <div class="offer-box">
+                <div class="offer-box" v-if="index < 6">
                     <div class="offer-info">
                         <div class="offer-title">
                             <span class="text-primary sub-title">{{__('messages.best_deal_month')}}</span>

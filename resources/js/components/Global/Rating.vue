@@ -2,13 +2,13 @@
 <div>
   <VueStarRating 
       :inline="true" 
-      :increment="0.5" 
+      :increment="0.5"  
       :star-size="2" 
       :read-only="readonly" 
       :show-rating="showrating"
       :rating="ratingvalue"
-       active-color="#5f60b9"
-       inactive-color="#e1e2ed"
+       active-color="#109848"
+       inactive-color="#ddd"
       @rating-selected="setCurrentSelectedRating"
   >
   </VueStarRating>

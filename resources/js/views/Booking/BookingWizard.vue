@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class=" mt-4 d-flex wizard-form">
+                            <div class="mt-4 d-flex wizard-form" style="justify-content: start !important;">
                                 <router-link :to="{ name:'frontend-home' }"  name="previous" @click="changeTab(1)" class="btn btn-link previous action-button-previous float-end me-1" value="Previous" >{{__('messages.cancel')}}</router-link>
                                 <button type="button" name="next" @click="changeTab(2)" class="btn btn-primary next action-button" value="Next"  >{{__('messages.continue')}}</button>
                                 
@@ -167,8 +167,8 @@
                                     <h3 class="primary-color "><span v-if="currencyPostion === 'left'">{{currencySymobl}}</span>{{parseFloat(booking.total_amount).toFixed(2)}}<span v-if="currencyPostion === 'right'">{{currencySymobl}}</span></h3>
                                 </div>
                                 <div class="mt-5 d-flex wizard-form">
-                                    <button type="button" name="next" @click="saveBooking" class="btn btn-primary next action-button float-end" value="Next" >{{__('messages.book_now')}}</button>
                                     <a  name="previous" @click="changeTab(1)" class="btn btn-link previous action-button-previous float-end me-1" value="Previous" >{{__('messages.cancel')}}</a>
+                                    <button type="button" name="next" @click="saveBooking" class="btn btn-primary next action-button float-end" value="Next" >{{__('messages.book_now')}}</button>
                                 </div>                               
                             </div>                            
                         </div>
@@ -213,8 +213,8 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <svg width="125" height="125" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.9225 21.6744L21.6766 29.4263L41.2115 9.89136" stroke="#625FC6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M29.8106 4.85714C27.9717 4.29972 26.0209 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 21.9621 43.6952 19.9953 43.1287 18.1429" stroke="#625FC6" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M13.9225 21.6744L21.6766 29.4263L41.2115 9.89136" stroke="#109848" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.8106 4.85714C27.9717 4.29972 26.0209 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 21.9621 43.6952 19.9953 43.1287 18.1429" stroke="#109848" stroke-width="2.5" stroke-linecap="round"/>
                     </svg>
                 </div>
                 <div class="col-12 mt-3 text-center">
@@ -230,11 +230,30 @@
    </div>
 </div>
 </template>
+<style scoped>
+.quantity{
+    width:50% !important;
+}
+@media only screen and (max-width: 997px){
+    .quantity{
+        width:100% !important;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .quantity{
+        width:80% !important;
+    }
+}
+
+
+</style>
+
 <script>
 import { mapGetters } from "vuex";
 import {post} from '../../request'
 import { displayMessage } from "../../messages";
 import { required } from 'vuelidate/lib/validators'
+
 export default {
   name: 'Wizard',
     validations: {
@@ -364,11 +383,16 @@ export default {
         this.current = 3;
         this.booking.discount = this.serviceData.discount
         this.booking.coupon_id = this.coupons.code
-        post("booking-save", this.booking).then((response) => {
+        
+        post("booking-save",  this.booking )
+        .then((response) => {
             this.booking.id = response.data.booking_id
-            this.$refs.confirmModal.show();
+            this.$refs.confirmModal.show()
         });
+        
       }
+
+      
     },
     dataCalculation(){
         var totalAmount = 0.0;

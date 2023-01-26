@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-modal ref="loginmodal" id="my-modal" title="Login">
+        <b-modal ref="loginmodal" id="my-modal" title="Log in to ODealsPro">
             <form action="javascript:void(0)" class="row" method="post">
                 <div class="form-group col-12">
                     <label for="email" class="font-weight-bold">{{__('auth.email')}}</label>
@@ -36,6 +36,25 @@
                         {{__('auth.login')}}
                     </button>
                 </div>
+                <div class="col-12">
+                    <p class="line">or sign up with</p>
+                </div>
+                <div class="col-12 mt-2 mb-2">
+                    <div class="row" style="row-gap:10px;">
+                        <div class="col-sm-6">
+                            <div class="btn-facebook d-flex">
+                                <i class="fab fa-facebook"></i>
+                                <p>Facebook</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="btn-google d-flex">
+                                <i class="fab fa-google"></i>
+                                <p>Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 text-center">
                     <label
                         class="d-flex align-items-center justify-content-center flex-column"
@@ -45,9 +64,9 @@
                         </div></label
                     >
                 </div>
-                <div class="col-12 text-center mt-2">
-                    <a @click="redirectToLogin" class="btn btn-primary btn-sm float-right">ADMIN | PROVIDER | ODEALS LOGIN</a>
-                </div>
+                <!-- <div class="col-12 text-center mt-2 odeals-login">
+                    <a @click="redirectToLogin" class="btn btn-primary btn-sm float-right"> PROVIDER | ODEALS PRO LOGIN</a>
+                </div> -->
             </form>
         </b-modal>
     </div>
@@ -63,11 +82,14 @@ export default {
             email: "",
             password: "",
             baseUrl: window.baseUrl,
-            showpassword: true
+            showpassword: true,
         };
     },
     computed: {
         ...mapGetters(["userData"]),
+        currentRouteName() {
+            return this.$route.name;
+        },
     },
     methods: {
         async login() {
@@ -115,4 +137,39 @@ export default {
   right:2rem;
   top:50px
 }
+.btn-facebook, .btn-google{
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    padding:10px 10px;
+    background:#f2f8f0;
+    border-radius:4px;
+    cursor:pointer;
+}
+.btn-facebook i, .btn-google i{
+    font-size:20px;
+    margin-right:4px;
+}
+.btn-facebook p, .btn-google p{
+    margin-bottom:0;
+    padding-bottom:0;
+}
+.btn-facebook i{
+    color:#4285f6;
+}
+.btn-google i{
+    color:#109848;;
+}
+.line {
+    margin-top:15px;
+    display:flex;
+  }
+  .line:before, .line:after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 2px;
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px ;
+  }
 </style>

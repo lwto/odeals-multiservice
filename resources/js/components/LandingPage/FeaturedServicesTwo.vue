@@ -2,7 +2,7 @@
 <section class="featured-services-two"  data-iq-gsap="onStart">
   <div class="container">
     <h3 class="text-center mb-5">Featured Services</h3>
-    <div v-if="slider" class="swiper-container featured-swiper">
+    <div class="swiper-container featured-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide d-flex justify-content-center" v-for="(data, index) in featuredservice" :key="index">
           <div class="inner-content">
@@ -26,7 +26,7 @@
                   </div>
               </div>
                 <p class="price">{{data.price_format}}</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p>
+                <!-- <p class="location"><i class="fas fa-map-marker-alt"></i> <span>{{data.city_id}}</span></p> -->
               </div>
             </div>  
           </div>

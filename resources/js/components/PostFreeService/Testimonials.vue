@@ -1,9 +1,9 @@
 <template>
-  <section class="testimonials my-2">
+  <section class="testimonials" style="padding:60px 0;">
     <div class="container">
-      <h3 class="text-center mb-2">Testimonials</h3>
+      <h3 class="text-center mb-5">Testimonials</h3>
       <div class="row" style="row-gap:10px;">
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 d-flex">
             <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/79.jpg"/>
@@ -16,7 +16,7 @@
               <p class="mt-1">Teacher</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 d-flex">
             <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/71.jpg"/>
@@ -28,7 +28,7 @@
               <p class="mt-1">Senior Advisor</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 d-flex">
             <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/men/47.jpg"/>
@@ -41,7 +41,7 @@
               <p class="mt-1">Taekwondo Coach</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6 d-flex">
             <div class="py-3 px-3 border">
               <div class="d-flex justify-content-center">
                 <img src="https://randomuser.me/api/portraits/women/17.jpg"/>
@@ -61,8 +61,14 @@
 </template>
 <style scoped>
 img{
-  width:100px;
-  width:100px;
+  width:80px;
+  width:80px;
   border-radius:50%;
+}
+h3{
+  color:#042f16;
+}
+h6{
+  color:#109848;
 }
 </style>

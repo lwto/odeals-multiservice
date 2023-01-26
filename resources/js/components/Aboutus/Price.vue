@@ -1,8 +1,9 @@
 <template>
-<section class="price padding-top ">
+<section class="price">
   <div class="container">
     
-    <h3 class="text-center mb-5">We Provide Professional Services at a Friendly Price</h3>
+    <h3 class="text-center mb-5">We Provide Professional Services <br/>
+      <span style="color:#109848;">at a Friendly Price</span></h3>
     
 
     <div class="row">
@@ -52,12 +53,14 @@
 </template>
 
 <style scoped>
-
-p{
-  color:black;
+.price{
+  padding:100px 0;
+}
+.h3{
+  color:#042f16;
 }
 .price i{
-  color:#5F60B9;
+  color:#109848;
   margin-right:15px;
 }
 .card-header{
@@ -66,13 +69,16 @@ p{
   background:transparent;
 }
 .card-header i{
-  font-size:24px;
+  font-size:20px;
   
 }
 .card{
-  border:1px solid;
   border-radius:0;
-  background:transparent;
+  background:#f2f8f0;
+  padding: 20px;
+}
+h5{
+  font-size:1.2rem;
 }
 
 </style>

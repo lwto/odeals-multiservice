@@ -2,9 +2,9 @@
 <div class="service-detail service-main mar-bot">
     <div class="container">
         <div class="service-image">
-            <img v-if="serviceData.attchment_extension == true" :src="serviceData.attchments.length >0 ? serviceData.attchments[0]  : baseUrl+'/images/default.png'"  alt="image" class="img-fluid">
+            <img v-if="serviceData.attchment_extension == true" :src="serviceData.attchments.length > 0 ? serviceData.attchments[0]  : baseUrl+'/images/default.png'"  alt="image" class="img-fluid">
             <div v-else class="player-container">
-                <vue-core-video-player  :src="serviceData.attchments.length >0 ?  serviceData.attchments[0] :baseUrl+'/images/file.png'" :cover="baseUrl+'/images/file.png'" :preload="'auto'"></vue-core-video-player>
+                <vue-core-video-player  :src="serviceData.attchments.length > 0 ?  serviceData.attchments[0] : baseUrl+'/images/file.png'" :cover="baseUrl+'/images/file.png'" :preload="'auto'"></vue-core-video-player>
             </div>
             <span class="service-fav-item badge badge-1 rounded-pill bg-white">{{__('messages.mark_as_favourite')}}
                  <favorite :servicedata="serviceData.id" :favorited="serviceData.is_favourite" @emit-list="serviceDetail"/>
@@ -116,7 +116,7 @@
                                     <div class="col-lg-4 col-md-6 col-xs-12" v-for="(data, index) in relatedService" :key="index"> 
                                     <service-list 
                                             :serviceId="data.id"
-                                            :imageUrl="data.attchments.length >0 ? data.attchments[0] : baseUrl+'/images/default.png'"
+                                            :imageUrl="data.attchments.length > 0 ? data.attchments[0] : baseUrl+'/images/default.png'"
                                             :is_favourite="data.is_favourite"
                                             :servicePrice="data.price_format"
                                             :serviceName="data.name"
@@ -222,6 +222,7 @@
 </div>
 </template>
 <script>
+
 import {post} from '../../request'
 import Favorite from '../../components/Global/Favorite.vue'
 export default {
