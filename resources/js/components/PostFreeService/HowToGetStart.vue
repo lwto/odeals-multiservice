@@ -5,7 +5,7 @@
       <div class="row justify-content-between" style="row-gap:10px;">
         <div class="col-lg-3">
           <img src="/images/icon/registered.png" />
-          <h4 class="mb-2 mt-2">Register As A Seller</h4>
+          <h4 class="mb-2 mt-2">Register As A Provider</h4>
           <p>Create your account with your phone number and email.
              Then, select the category of products you provide and
               submit your business details (documents, credentials, etc).</p>
@@ -19,7 +19,7 @@
         <div class="col-lg-3">
           <img src="/images/icon/hand.png" />
           <h4 class="mb-2 mt-2">Begin & Start Earning</h4>
-          <p>Offer your products/goods, connect and earn!</p>
+          <p>Offer your services, connect and earn!</p>
         </div>
       </div>
     </div>

@@ -7,9 +7,9 @@
         <p class="mb-3">ODealsPro can boost up your sale by provide your customers easy booking process, receive online payments, and get clients self-booking 24/7 on our platform!</p>
         <h6 class="mb-5 bold">Just one click you can be our partner</h6>
         <div class="btn btn-odeals">
-          <router-link :to="{ name: 'prof-register' }">
+          <a href="#" target="_blank">
             Join us
-          </router-link>
+          </a>
         </div>
       </div>
       <div class="col-lg-6">

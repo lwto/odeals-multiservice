@@ -7,7 +7,7 @@
             <!-- </div> -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 list-inline justify-content-center">
                 <div v-for="(data, index) in provider" :key="index" class="col d-flex justify-content-center">
-                    <div class="provider-box" v-if="index < 5" >
+                    <div class="provider-box" v-if="index < 4" >
                         <div class="img-box">
                             <router-link :to="{ name: 'provider-service',params: { provider_id: data.id }}">
                             <div class="team-img">

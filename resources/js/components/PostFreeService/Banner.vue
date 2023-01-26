@@ -5,11 +5,11 @@
         <div class="col-lg-5">
           <h2>Unlimited Opportunities with ODeals!</h2>
           <p class="mt-3">Interested in making the most out of your skills? Then join ODeals and earn 100% from completed tasks!</p>
-          <router-link :to="{ name: 'prof-register' }">
+          <a href="#" target="_blank">
             <button class="btn odeals-btn mt-3">
               Register for FREE
             </button>
-          </router-link>
+          </a>
         </div>
         <div class="col-lg-6 d-flex justify-content-center">
           <img src="/images/frontend/opportunities.jpg"/>

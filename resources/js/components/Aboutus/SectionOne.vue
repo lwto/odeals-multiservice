@@ -11,12 +11,12 @@
                   </div>
               </div>
               <div class="col mb-4 h-100">
-                  <img class="w-100" src="images/frontend/about-1.png">
+                  <img class="w-100" src="images/frontend/about-1.jpg">
               </div>
           </div>
           <div class="row">
               <div class="col-lg-12">
-                  <img class="w-100" src="images/frontend/about-2.png">
+                  <img class="w-100" src="images/frontend/about-2.jpg">
               </div>                    
           </div>
         </div>

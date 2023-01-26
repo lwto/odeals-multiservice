@@ -8,11 +8,11 @@
            used products, connecting users that are just a click away.
         </p>
         <div class="text-center">
-          <router-link :to="{ name: 'prof-register' }">
+          <a href="#" target="_blank">
             <button class="btn odeals-btn mt-3">
               Register for FREE
             </button>
-          </router-link>
+          </a>
           <!-- <router-link :to="{ name: 'register' }">
             <button class="btn btn-primary btn-register mt-3">
               Get Started for FREE
@@ -23,24 +23,24 @@
 
       <div class="row justify-content-between" style="margin-top:60px; row-gap:10px;">
         <div class="col-lg-3 col-md-6">
-          <h4 class="mb-2">Wide Selection Of Goods</h4>
+          <h4 class="mb-2">Wide Selection Of Service</h4>
           <img src="/images/icon/choice.png"/>
-          <p>Sell and market your products on ODeals, from new to used goods!</p>
+          <p>Post and market your services on ODeals, as a freelance provider or company!</p>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h4 class="mb-2">Marketing Your Products</h4>
+          <h4 class="mb-2">Marketing Your Services</h4>
           <img src="/images/icon/star.png"/>
-          <p>Post your products to sell with a tap of button.</p>
+          <p>Post your services to book with a tap of button.</p>
         </div>
         <div class="col-lg-3 col-md-6">
           <h4 class="mb-2">Easy to<br/> use</h4>
           <img src="/images/icon/click.png"/>
-          <p>Manage, list and categories your items quick and easy.</p>
+          <p>Manage, list and categories your services quick and easy.</p>
         </div>
         <div class="col-lg-3 col-md-6">
           <h4 class="mb-2">Free to<br/> use</h4>
           <img src="/images/icon/add-user.png"/>
-          <p>Get started with listing your goods and earn 100% from everything you sell with ODeals!</p>
+          <p>Get started with listing your services and earn 100% from everything you sell with ODeals!</p>
         </div>
       </div>
     </div>

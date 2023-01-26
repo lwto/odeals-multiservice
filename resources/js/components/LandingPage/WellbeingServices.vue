@@ -3,6 +3,7 @@
     <div class="container">
       <h3 class="text-center mb-5">Top Rated Services</h3>
       <div class="deals row align-items-center justify-content-center" style="row-gap:15px;">
+        <!-- Top rated service card STATIC -->
         <div class="col-lg-8">
           <div class="row justify-content-between" style="row-gap:15px;">
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
@@ -79,28 +80,52 @@
             </div>
           </div>
         </div>
+         
+        <!-- Top rated service card DYNAMIC  -->
+        <!-- <div class="col-lg-8">
+          <div class="row justify-content-between" style="row-gap:15px;">
+            <div v-for="(data,index) in topratedservice" :key="index" class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <router-link :to="{name: 'service-detail',params: { service_id: data.id }}" class="main-title" v-if="index < 6">
+                <div class="house-card">
+                  <div class="house-card-img">
+                    <img :src="data.attchments[0] ? data.attchments[0]: baseUrl+'/images/default.png'" >
+                    <p v-if="data.discount" class="promo">{{ data.discount }}% OFF</p>
+                  </div>
+                  <div class="body">
+                    <router-link :to="{name: 'service-detail',params: { service_id: data.id }}" class="main-title"><p class="service-title text-truncate">{{data.name}}</p></router-link>
+                    <p class="price">{{data.price_format}}</p>
+                  </div>
+                </div>
+              </router-link>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ADS Banner -->
         <div class="col-lg-4 ">
           <div class="swiper-container adsBanner">
             <div class="swiper-wrapper">
                 <div class="swiper-slide ">
                     <div class="inner-content d-flex justify-content-center">
-                        <img src="/images/frontend/adsPromo/ads-img1.jpg"/>
+                        <img src="/images/frontend/adsPromo/ads-img-7.jpg"/>
                     </div>
                 </div>
                 <div class="swiper-slide item-slide">
                   <div class="inner-content d-flex justify-content-center">
-                      <img src="/images/frontend/adsPromo/ads-img2.jpg"/>
+                      <img src="/images/frontend/adsPromo/ads-img-8.jpg"/>
                   </div>
               </div>
               <div class="swiper-slide item-slide">
                 <div class="inner-content d-flex justify-content-center">
-                    <img src="/images/frontend/adsPromo/ads-img3.jpg"/>
+                    <img src="/images/frontend/adsPromo/ads-img-9.jpg"/>
                 </div>
             </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
+
+        
       </div>
     </div>
   </section>
@@ -188,7 +213,16 @@ p{
       }
 
 }
+@media only screen and (max-width: 350px){
+  .house-card{
+      width:245px;
+      max-width:245px;
+    }
+      .house-card-img{
+        height:130px;
+      }
 
+}
 
 </style>
 <script>
@@ -231,7 +265,7 @@ export default {
     },
     
     computed: {
-        ...mapGetters(['slider']),
+        ...mapGetters(['slider','topratedservice']),
     },
    
 }

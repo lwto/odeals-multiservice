@@ -23,9 +23,9 @@
           </router-link>
         </div>
         <div class="join-us">
-          <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+          <a href="#" target="_blank">
             Join as Partner
-          </router-link>
+          </a>
         </div>
         <!-------- Nav Menu ------->
         <nav class="nav-menu" id="nav-menu">
@@ -87,9 +87,9 @@
                       </router-link>
                     </li>
                     <li class="link-item">
-                      <router-link :to="{ name: 'prof-register' }"   :class="(currentRouteName === 'prof-register' ? activeRouteClass + ' nav-link' : 'nav-link' )">
+                      <a href="#" target="_blank">
                         Join as Partner
-                      </router-link>
+                      </a>
                     </li>
                     <li class="link-item">
                       <router-link :to="{ name: 'contact-us' }"   :class="(currentRouteName === 'contact-us' ? activeRouteClass + ' nav-link' : 'nav-link' )">
@@ -122,9 +122,9 @@
               <router-link :to="{ name: 'frontend-home' }" class="btn-mobile" >
                 Home
               </router-link>
-              <router-link :to="{ name: 'prof-register' }" class="btn-mobile"  >
+              <a href="#" target="_blank" class="btn-mobile"  >
                 Join as Partner
-              </router-link>
+              </a>
             </div>
             <div class="d-flex gap-2 align-items-center mb-3 btn-gp">
               <router-link :to="{ name: 'category' }" class="btn-mobile">
@@ -334,19 +334,6 @@
           <div class="user-menu" id="user-menu">
             <i class="fas fa-user"></i>
           </div>
-          <!-- <a 
-            href="#"
-            class="nav-link search-toggle p-0"/
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            @click="openDropdown"
-          >
-            <img
-              :src="userData.profile_image ? userData.profile_image : baseUrl+'/images/user/user.png'"
-              alt="User-Profile"
-              class="img-fluid user-image avatar avatar-rounded"
-            />                      
-          </a> -->
           <div id="user-menu-dropdown">
             <ul class="list-unstyled mb-0">
                 <li v-if="!isLogged" class="list-link">
@@ -359,14 +346,9 @@
                     {{__('messages.register')}}
                   </router-link>
                 </li>                
-                <li  v-if="!isLogged" class="list-link">
-                  <router-link :to="{ name: 'prof-register' }">
-                    Join as Partner
-                  </router-link>
-                </li>
                 <li v-if="isLogged">
                     <a href="#" class="dropdown-item list-link" @click="getHomePage()"
-                    >Profile</a
+                    >Dashboard</a
                     >
                 </li>
                 <li v-if="isLogged">
@@ -389,13 +371,8 @@
             </ul>       
           </div>
         </div>
-        <div v-if="isLogged" class="user-booking">
-            <router-link :to="{ name: 'booking' }" class="btn btn-sm">
-              {{__('messages.booking')}}
-            </router-link>
-        </div>
-        <div v-else class="quick-booking" v-b-modal.nearlocation>
-          <Button class="btn btn-sm">Booking</Button><br/>
+        <div class="quick-booking" v-b-modal.nearlocation>
+          <Button class="btn btn-sm">Quick Booking</Button><br/>
         </div>
       </div>
 
@@ -427,6 +404,9 @@ ul{
   list-style-type: none;
   padding:0;
   margin:0;
+}
+.dropdown-item{
+  padding:15px;
 }
 .language-switcher{
   border:none;

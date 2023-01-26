@@ -4,7 +4,7 @@
     <SectionOne/>
     <SectionTwo/>
     <SectionThree/>
-    <AdsBanner/>
+    <!-- <AdsBanner/> -->
     <SectionFour/>
   </div>
 </template>

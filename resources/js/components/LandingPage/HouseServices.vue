@@ -8,17 +8,17 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide ">
                     <div class="inner-content d-flex justify-content-center">
-                        <img src="/images/frontend/adsPromo/ads-img1.jpg"/>
+                        <img src="/images/frontend/adsPromo/ads-image-5.jpg"/>
                     </div>
                 </div>
                 <div class="swiper-slide item-slide">
                   <div class="inner-content d-flex justify-content-center">
-                      <img src="/images/frontend/adsPromo/ads-img2.jpg"/>
+                      <img src="/images/frontend/adsPromo/ads-image-4.jpg"/>
                   </div>
               </div>
               <div class="swiper-slide item-slide">
                 <div class="inner-content d-flex justify-content-center">
-                    <img src="/images/frontend/adsPromo/ads-img3.jpg"/>
+                    <img src="/images/frontend/adsPromo/ads-image-7.jpg"/>
                 </div>
             </div>
             </div>
@@ -27,8 +27,8 @@
         </div>
         <div class="col-lg-8">
           <div class="row justify-content-between" style="row-gap:15px;">
-            <div v-for="(data,index) in topSix" :key="index" class="col-lg-4 col-md-6 d-flex justify-content-center">
-              <router-link :to="{name: 'service-detail',params: { service_id: data.id }}" class="main-title">
+            <div v-for="(data,index) in discountservice" :key="index" class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <router-link :to="{name: 'service-detail',params: { service_id: data.id }}" class="main-title" v-if="index < 6">
                 <div class="house-card">
                   <div class="house-card-img">
                     <img :src="data.attchments[0] ? data.attchments[0]: baseUrl+'/images/default.png'" >
@@ -111,12 +111,23 @@ p{
       max-width: 200px !important;
     }
   }
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 992px){
   .house-card{
-      width:90% !important;
+      width:300px !important;
+      max-width:300px !important;
     }
       .house-card-img{
         height:200px;
+      }
+
+}
+@media only screen and (max-width: 350px){
+  .house-card{
+      width:245px !important;
+      max-width:245px !important;
+    }
+      .house-card-img{
+        height:130px;
       }
 
 }
@@ -162,19 +173,7 @@ export default {
     },
     
     computed: {
-        ...mapGetters(['slider']),
-
-        topSix() {
-        const limit = 6;
-        let count = 0;
-        let res = []
-        for (let i = 0; i < this.$store.state.discountservice.length && count < limit; i += 1) {
-          let deal = this.$store.state.discountservice[i];
-            res.push(deal);
-            count++;
-          }
-        return res;
-      }
+        ...mapGetters(['slider', 'discountservice']),
     },
    
 }
