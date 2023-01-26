@@ -3,9 +3,9 @@
   <div class="container text-center">
     <h2 class="mb-5">Become our partner</h2>
     <div class="btn btn-odeals">
-      <router-link :to="{ name: 'prof-register' }">
+      <a href="#" target="_blank">
         Join us
-      </router-link>
+      </a>
     </div>
   </div>
 </section>
